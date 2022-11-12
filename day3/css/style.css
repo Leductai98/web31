@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+.container {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post {
+  width: 400px;
+  box-shadow: 0 0 5px rgb(147, 150, 160);
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post:hover {
+  box-shadow: 0 0 5px rgb(147, 150, 180);
+}
+.content {
+  padding: 15px;
+}
+.tittle {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.excerpt {
+  line-height: 1.5;
+}
+.meta {
+  border-top: 1px solid rgb(190, 180, 180);
+  padding: 10px 15px;
+}
+.views {
+  display: inline-block;
+  text-align: left;
+}
+.published {
+  display: inline-block;
+  text-align: right;
+  margin-left: 200px;
+}
