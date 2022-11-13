@@ -1,0 +1,25 @@
+.flex-container {
+  /* Bởi vì flexbox là module, nên tự động đi kèm với tất cả thuộc tính khác */
+  display: flex;
+
+  /* Quy định hướng sắp xếp các phần tử */
+  flex-direction: row; /*Giá trị mặc định */
+
+  /* Căn chỉnh các item theo trục main */
+  justify-content: flex-start; /*Giá trị mặc định */
+
+  /* Căn chỉnh các item theo trục cross (căn chỉnh các mục trên dòng của nó */
+  align-items: stretch; /*Giá trị mặc định */
+
+  flex-wrap: wrap;
+
+  /* Căn chỉnh dòng(line) trong container */
+  align-content: stretch;
+
+  /* Đặt khoảng cách giữa các item */
+  gap: 20px;
+}
+
+.flex-item {
+  background-color: brown;
+}
