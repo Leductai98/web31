@@ -25,6 +25,8 @@ ul {
   color: #fff;
 }
 footer {
+  display: flex;
+  justify-content: center;
   color: #f4f7fa;
   line-height: 2.5rem;
   padding: 3rem 0;
