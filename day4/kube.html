@@ -4,126 +4,82 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Techmaster Việt Nam - Học là có việc</title>
-    <link rel="shortcut icon" href="./image/logotm.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/style_baitap4.css" />
+    <title>Thiết Kế UI/UX cho phần mềm</title>
+    <link rel="stylesheet" href="./css/ux.css" />
     <link
       rel="stylesheet"
       href="./fonts/fontawesome-free-6.2.0-web/css/all.css"
     />
+    <link rel="shortcut icon" href="./image/logotm.png" type="image/x-icon" />
   </head>
   <body>
+    <nav>
+      <a href="./baitap4.html" class="nav">Quay lại trang chủ</a>
+    </nav>
     <main>
-      <div class="list-courses">
-        <div class="tech-card">
-          <a href="./ux.html">
-            <div class="course-thumnail">
-              <img src="./image/ux.jpeg" alt="Thiết Kế UI/UX cho phần mềm" />
-            </div>
-            <div class="course-info">
-              <p class="title">Thiết Kế UI/UX cho phần mềm</p>
-              <p class="course-description">
-                <span>Onlab</span>
-                <span
-                  >5<i class="fa-solid fa-star" style="color: #ffd600"></i
-                ></span>
+      <div class="container">
+        <p class="title">Khoá học Kubernetes căn bản qua các ví dụ</p>
+        <div class="support">
+          <div class="left">
+            <img src="./image/phamman.png" alt="Phạm Mẫn" />
+          </div>
+          <div class="right">
+            <span class="information"
+              ><p><b>Tư vấn viên</b>: Phạm Thị Mẫn</p></span
+            >
+            <span class="information"
+              ><p>
+                <b>Email</b>:
+                <a href="mailto:manpham@techmaster.vn" class="mail"
+                  >manpham@techmaster.vn</a
+                >
               </p>
-            </div>
-          </a>
+            </span>
+            <span class="information"
+              ><p>
+                <b>Số điện thoại</b>:
+                <a href="tel:0963023185" class="mail">0963023185</a>
+              </p>
+            </span>
+            <button>
+              <i class="fa-solid fa-phone-flip"></i>
+              Nhận tư vấn
+            </button>
+          </div>
         </div>
-        <div class="tech-card">
-          <a href="./devops.html">
-            <div class="course-thumnail">
-              <img src="./image/devops.png" alt="DevOps 2022" />
-            </div>
-            <div class="course-info">
-              <p class="title">DevOps 2022</p>
-              <p class="course-description">
-                <span>Onlab</span>
-                <span
-                  >5<i class="fa-solid fa-star" style="color: #ffd600"></i
-                ></span>
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="tech-card">
-          <a href="./frontend.html">
-            <div class="course-thumnail">
-              <img
-                src="./image/frontend.jpeg"
-                alt="Web Frontend nâng cao với React"
-              />
-            </div>
-            <div class="course-info">
-              <p class="title">Web Frontend nâng cao với React</p>
-              <p class="course-description">
-                <span>Onlab</span>
-                <span
-                  >5<i class="fa-solid fa-star" style="color: #ffd600"></i
-                ></span>
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="tech-card">
-          <a href="./kube.html">
-            <div class="course-thumnail">
-              <img
-                src="./image/kube.png"
-                alt="Khoá học Kubernetes căn bản qua các ví dụ"
-              />
-            </div>
-            <div class="course-info">
-              <p class="title">Khoá học Kubernetes căn bản qua các ví dụ</p>
-              <p class="course-description">
-                <span>Onlab</span>
-                <span
-                  >5<i class="fa-solid fa-star" style="color: #ffd600"></i
-                ></span>
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="tech-card">
-          <a href="./security.html">
-            <div class="course-thumnail">
-              <img
-                src="./image/websecurity.jpeg"
-                alt="WEB SECURITY - Bảo mật Web 2022"
-              />
-            </div>
-            <div class="course-info">
-              <p class="title">WEB SECURITY - Bảo mật Web 2022</p>
-              <p class="course-description">
-                <span>Onlab</span>
-                <span
-                  >5<i class="fa-solid fa-star" style="color: #ffd600"></i
-                ></span>
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="tech-card">
-          <a href="./native.html">
-            <div class="course-thumnail">
-              <img
-                src="./image/react native.png"
-                alt="Lập trình di động đa nền tảng React Native cập nhật 2022"
-              />
-            </div>
-            <div class="course-info">
-              <p class="title">
-                Lập trình di động đa nền tảng React Native cập nhật 2022
-              </p>
-              <p class="course-description">
-                <span>Onlab</span>
-                <span
-                  >4.5<i class="fa-solid fa-star" style="color: #ffd600"></i
-                ></span>
-              </p>
-            </div>
-          </a>
+
+        <div class="course-description">
+          <h3>1. Mục tiêu khóa học</h3>
+
+          <p>
+            Cung cấp kiến thức cơ bản về xây dựng ứng dụng trên K8S cùng các
+            kiến trúc triển khai trên môi trường production. Khóa học tập trung
+            vào những kiến thức, kỹ năng, công cụ DevOps được sử dụng hàng ngày
+            tại các công ty lớn.
+          </p>
+
+          <h3>2. Đối tượng khóa học</h3>
+          <p>
+            Backend Developer muốn bổ sung kiến thức về triển khai, Solution
+            Architect muốn cập nhật các thiết kế hệ thống micro-services, System
+            Admin muốn tiếp cận với nền tảng ứng dụng container, cloud,…
+          </p>
+          <h3>3. Thời lượng</h3>
+          <p>8 buổi x 2.5h (20h)</p>
+          <h3>4. Điều kiện</h3>
+          <p>Học viên đã có kiến thức về linux, docker, container.</p>
+          <h3>Giáo trình khóa học</h3>
+          <ul class="description">
+            <li>Giới thiệu K8S, các thành phần</li>
+            <li>Deployment cơ bản</li>
+            <li>Expose service trên K8S</li>
+
+            <li>Quản lý package trên K8S</li>
+            <li>Logging, monitoring</li>
+            <li>Storage</li>
+            <li>Rolling update application</li>
+            <li>Tích hợp với Jenkins</li>
+          </ul>
         </div>
       </div>
     </main>

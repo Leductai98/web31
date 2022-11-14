@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu về position</title>
+    <link
+      rel="shortcut icon"
+      href="./image/CSS-Position.jpg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <h3>Position trong CSS là gì?</h3>
+    <p>
+      Position trong CSS được sử dụng với mục đích định vị vị trí hiển thị của
+      các phần tử thẻ HTML và thường dùng trong việc xây dựng CSS cho menu nhiều
+      cấp, tooltip và một số chức năng khác có liên quan đến vị trí.
+    </p>
+    <img src="./image/position.png" alt="" />
+    <p>
+      Khi thiết kế layout cho website, nếu chuyển từ file thiết kế ở định dạng
+      HTML thì việc sử dụng thuộc tính position trong CSS là điều bắt buộc. Hiểu
+      một cách đơn giản thì thuộc tính position xác định vị trí của một phần tử
+      ở trên trang. Có năm loại position khác nhau trong CSS là: static.
+    </p>
+    <ul>
+      <li>static.</li>
+      <li>relative.</li>
+      <li>fixed.</li>
+      <li>absolute.</li>
+      <li>sticky.</li>
+    </ul>
+    <h3>Các vị trí của position trong CSS</h3>
+    <p>
+      Trước khi đi sâu vào việc giải thích các giá trị trong position, hãy cùng
+      trang bị một chút kiến thức về các thuộc tính về vị trí như top, right,
+      bottom và left.
+    </p>
+    <ul>
+      <li>
+        Top: Giúp ta căn chỉnh phần tử từ trên xuống dưới nếu giá trị > 0 và
+        ngược lại.
+      </li>
+      <li>
+        Bottom: Ngược lại với thuộc tính top, cho phép căn chỉnh phần tử từ dưới
+        lên trên nếu giá trị, ngược lại sẽ chạy xuống dưới nếu có giá trị nhỏ
+        hơn 0.
+      </li>
+      <li>
+        Right: Giúp căn chỉnh phần tử qua phải nếu nhận giá trị > 0 và ngược
+        lại.
+      </li>
+      <li>
+        Left: Cho phép căn chỉnh phần tử qua phải nếu nhận giá trị > 0 và ngược
+        lại.
+      </li>
+      <p>
+        Khi sử dụng phần tử cha có thuộc tính position:relative, nếu muốn canh
+        phần tử con theo phần tử cha và sử dụng position:absolute thì chúng ta
+        sử dụng các thuộc tính vị trí ở trên để căn chỉnh.
+      </p>
+    </ul>
+    <h3>Các thuộc tính của position trong CSS</h3>
+    <p>Cú pháp của position trong CSS là:</p>
+    <p>position: value;</p>
+    <p>Trong đó value có có thể nhận những giá trị dưới đây:</p>
+    <ul>
+      <li>
+        static: Vị trí ở trạng thái mặc định của phần tử (tức là các thuộc tính
+        top, bottom, right, left không có hiệu lực) - div {position:static;}.
+      </li>
+      <li>
+        relative: Vị trí tương đối so với vị trí mặc định – div
+        {position:relative; top:10px; left:15px;}.
+      </li>
+      <li>
+        absolute: Vị trí tuyệt đối cho các thành phần theo thành phần bao ngoài
+        hoặc cửa sổ trình duyệt – div{position:absolute; top:10px; left:15px;}.
+      </li>
+      <li>
+        fixed: Định vị theo màn hình và luôn cố định ở một ví trí trên viewport
+        (khu vực hiển thị nội dung trên màn hình) – div{position:fixed;
+        top:10px; left:15px;}
+      </li>
+      <li>
+        sticky: Vị trí của phần tử được định vị khi người dùng sử dụng thanh
+        cuộn.
+      </li>
+    </ul>
+    <h4>Static</h4>
+    <p>
+      Xét một ví dụ dưới đây, trong đó thuộc tính position trong CSS nhận giá
+      trị static.
+    </p>
+    <p>CSS:</p>
+    <img src="./image/staticcss.png" alt="" />
+    <p>HTML:</p>
+    <img src="./image/statichtml.png" alt="" />
+    <p>Kết quả:</p>
+    <img src="./image/ketquastatic.png" alt="" />
+    <p>
+      Trong ví dụ này ta đã tạo 3 div, được đặt thành float left và được đặt
+      trong một div khác với class tên totn_container. Mỗi div được gán cho một
+      class, lần lượt là totn1, totn2 và totn3. Sau đó ta cho class totn2 nhận
+      giá trị position là static. Đây cũng chính là giá trị vị trí mặc định nên
+      kết quả sẽ không có gì thay đổi, vì vậy nó tương đương với CSS dưới đây:
+    </p>
+    <img src="./image/stactic.png" alt="" />
+    <h4>Relative</h4>
+    <p>
+      Bây giờ giả sử ta cho div thứ hai có thuộc tính position nhận giá trị
+      relative. Khi đó CSS sẽ có dạng như sau:
+    </p>
+    <img src="./image/relativecss.png" alt="" />
+    <p>Và HTML:</p>
+    <img src="./image/relativehtml.png" alt="" />
+    <p>Kết quả:</p>
+    <img src="./image/ketquarelative.png" alt="" />
+    <p>
+      Trong ví dụ trên, ta đã đặt giá trị position của class 2 thành relative,
+      thuộc tính top và left lần lượt nhận giá trị 20px và 15px. Khi đó phần thử
+      div (tương ứng với class này) sẽ di chuyển 20px xuống dưới và sang trái
+      15px so với vị trí mặc định.
+    </p>
+    <h4>Absolute</h4>
+    <p>
+      Tiếp theo, hãy thử xem ví dụ về thuộc tính position absolute trong CSS:
+    </p>
+    <img src="./image/asbcss.png" alt="" />
+    <p>Trong HTML:</p>
+    <img src="./image/asbhtml.png" alt="" />
+    <p>Kết quả:</p>
+    <img src="./image/ketquaasb.png" alt="" />
+    <p>
+      Qua đoạn code trên, ta đã di chuyển phần tử div của class totn2 vào trong
+      parent của nó, với vị trí tuyệt đối là 20px về phía trên và 15px về phía
+      bên trái của container.
+    </p>
+    <h4>Fixed</h4>
+    <p>Xét đoạn code CSS sau:</p>
+    <img src="./image/fcss.png" alt="" />
+    <p>HTML:</p>
+    <img src="./image/fhtml.png" alt="" />
+    <p>Kết quả:</p>
+    <img src="./image/ketquaf.png" alt="" />
+    <p>
+      Trong ví dụ này, ta đã đặt giá trị fixed cho thuộc tính position của class
+      totn2, đồng thời giá trị của top và left cũng lần lượt là 20px và 15px.
+      Khi đó phần tử div được chuyển vào trong viewport của màn hình tại vị trí
+      cố định là 20px lên trên và 15px về phía bên trái của viewport.
+    </p>
+    <p>
+      Kết quả cũng khá giống với ví dụ của thuộc tính position absolute, tuy
+      nhiên khi ta cuộn màn hình thì phần tử div này vẫn sẽ nằm cố định ở một vị
+      trí ở trên viewport của màn hình.
+    </p>
+    <h4>Sticky</h4>
+    <p>
+      Thuộc tính này không được hỗ trợ quá nhiều trong cộng đồng làm web và
+      không tương thích với một số trình duyệt cũ. Về cơ bản thì phần tử sẽ linh
+      động chuyển đổi giữa hai trạng thái relative và fixed để thay đổi vị trí
+      dựa trên thao tác cuộn của người dùng.
+    </p>
+  </body>
+</html>
