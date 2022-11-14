@@ -10,6 +10,9 @@ img {
   border-style: none;
 }
 .container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #30598c;
   width: 100%;
   padding-top: 20px;
@@ -25,8 +28,6 @@ ul {
   color: #fff;
 }
 footer {
-  display: flex;
-  justify-content: center;
   color: #f4f7fa;
   line-height: 2.5rem;
   padding: 3rem 0;
