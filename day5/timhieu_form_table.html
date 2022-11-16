@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu về Form và Table</title>
+  </head>
+  <body>
+    <h1>Thẻ Form trong HTML</h1>
+    <p>
+      Tạo form trong HTML với thẻ form, thuộc tính action của form gán địa gửi
+      gửi dữ liệu, thuộc tính method là phương thức gửi dữ liệu, các thẻ tạo
+      phần tử điều khiển trong form như thẻ input, button ... Nút bấm submit để
+      gửi dữ liệu trong HTML FORM.
+    </p>
+    <p>Thẻ form cơ bản có hai thuộc tính cần lưu tâm là action và method:</p>
+    <ul>
+      <li>
+        Thuộc tính action trong form: thuộc tính để thiết lập URL sẽ nhận dữ
+        liệu, là địa chỉ mà dữ liệu của form gửi đến (submit đến, post đến).
+        Thiếu tham số này thì action bằng URL đang truy cập (tức gửi thông tin
+        form đến server theo địa chỉ đang truy cập). Web server nhận được dữ
+        liệu, xử lý và trả về nội dung nào đó.
+      </li>
+      <li>
+        Thuộc tính method trong form: thuộc tính để thiết lập HTTP Method, xem
+        thêm HTTP Request Message thường có giá trị bằng get hoặc post. Nếu
+        không viết thuộc tính này thì method mặc định của form là get
+      </li>
+    </ul>
+    <h4>Ví dụ tạo form html</h4>
+    <p>
+      Ví dụ FORM HTML sau yêu cầu người dùng điền tên đăng nhập, password và bấm
+      vào nút Đăng nhập để gửi đi.
+    </p>
+    <img src="./image/taoform.png" alt="" />
+    <img src="./image/ketquataoform.png" alt="" />
+    <p>
+      Với FORM HTML trên, nó có ba điều khiển (control), đều được tạo ra từ thẻ
+      <input /> chúng được đặt tên thông qua thuộc tính name gồm: name, pass,
+      submit. Tên này coi như tên trường dữ liệu mà FORM sẽ gửi đi. Khi bấm gửi
+      dữ liệu (submit dữ liệu) ở trên là nút (Đăng nhập) thì dữ liệu trong các
+      control sẽ được gửi đi, khi gửi đi mỗi dữ liệu gồm tên và giá trị.
+    </p>
+    <h4>Tạo nút bấm để gửi (submit) form HTML, reset form</h4>
+    <p>
+      Để có nút bấm submit, bấm vào đó dữ liệu của form được thu thập và gửi đi
+      thì bạn có thể dùng thẻ input hoặc thẻ button:
+    </p>
+    <p>Nút bấm bằng thẻ <input /></p>
+    <img src="./image/input.png" alt="" />
+    <p>
+      Tạo nút bấm gửi (submit) thì cho thuộc tính type="submit", còn nhãn nút
+      bấm thiết lập qua thuộc tính value="Text", Ví dụ:
+    </p>
+    <img src="./image/guidulieu.png" alt="" />
+    <p>
+      Tạo nút bấm, bấm vào đó toàn bộ dữ liệu trong các control của FORM bị xóa
+      đi về mặc định, để nhập lại thì thuộc tính type thiết lập bằng reset
+    </p>
+    <img src="./image/nhaplai.png" alt="" />
+    <h4>Sử dụng thẻ button tạo nút bấm</h4>
+    <p>
+      Thẻ button chuyển tạo ra các điều khiển nút bấm trong HTML FORM, thẻ này
+      có đóng thẻ, do vậy button có thể chứa nội dung phong phú để trình bày nút
+      bấm hơn input
+    </p>
+    <p>
+      Để tạo ra nút bấm submit và reset tương tự như input chỉ việc thiết lập
+      giá trị submit hay reset cho thuộc tính type
+    </p>
+    <img src="./image/button.png" alt="" />
+    <h4>Các phần tử điều khiển trong FORM</h4>
+    <p>
+      Các phần tử điều khiển trong FORM là nơi mà người dụng nhập dữ liệu, lựa
+      chọn dữ liệu, thông tin trong các điều khiển này sẽ được tập hợp lại để
+      gửi đi, để tạo ra các điều khiển ta dùng các thẻ như: input, textarea,
+      select, button, datalist, label, fieldset, datalist, ...
+    </p>
+    <h1>Cách tạo một cái bảng (table) trong HTML</h1>
+    <h2>1) Các thẻ được sử dụng trong việc tạo bảng</h2>
+    <p>
+      - Thông thường, để tạo được một cái bảng thì chúng ta cần phải sử dụng bốn
+      loại thẻ:
+    </p>
+    <img src="./image/table.png" alt="" />
+    <h2>2) Các thuộc tính được dùng trong việc tạo bảng</h2>
+    <p>
+      - Dưới đây là danh sách một số thuộc tính thường được áp dụng trong việc
+      tạo bảng.
+    </p>
+    <img src="./image/thuoctinhtable.png" alt="" />
+    <h2>3) Tạo một cái tiêu đề cho bảng</h2>
+    <p>
+      - Để tạo một cái tiêu đề cho bảng thì chúng ta cần phải đặt thẻ caption
+      nằm ở vị trí đầu tiên bên trong phần tử table với cú pháp như sau:
+    </p>
+    <img src="./image/caption.png" alt="" />
+    <p>
+      - Trong đó, value có thể được xác định dựa theo một trong hai loại giá
+      trị:
+    </p>
+    <img src="./image/topbot.png" alt="" />
+  </body>
+</html>

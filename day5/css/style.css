@@ -1,0 +1,75 @@
+.static {
+  width: 200px;
+  height: 200px;
+  position: static;
+  background-color: blue;
+}
+.relative {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+
+  /* Mặc định tất cả giá trị khác static sẽ năm trên layer cao hơn và che phủ các phần tử static*/
+  /* Việc sử dụng relative không ảnh hưởng đến vị trí của phần tử xung quanh*/
+  /* Chỉ áp dụng được 2/4 thuộc tính và thường theo 1 góc cụ thể */
+  /* Thực tế relative không phải để dịch chuyển vị trí phần tử mà sử dụng để làm mốc căn chỉnh cho các phần tử con là absolute */
+  /* Trường hợp dịch chuyển phần tử thì dùng translate thay thế */
+  position: relative;
+  z-index: -1;
+}
+
+.absolute {
+  width: 200px;
+  height: 200px;
+  background-color: brown;
+
+  /* Khi sử dụng absolute thì các phân tư xung quanh sẽ bị ảnh hưởng */
+  /* khi mà không nằm trong bất kỳ thẻ cha nào có position khác staitc thì sẽ căn theo khung nhìn (viewport) - khung trình duyệt */
+  /* Căn theo phần tử cha gần nhất có position khác static */
+  /* Có thẻ áp dụng đồng thời cả 4 thuộc tính top left right bottom - hữu ích trong trường hợp tạo lớp phủ màn hình/phần tử (chỉ áp dụng được khi không set kích thước) */
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+.relative:hover .absolute.overlay {
+  display: block;
+}
+
+.absolute.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(110, 26, 26, 0.712);
+}
+.fixed {
+  width: 200px;
+  height: 200px;
+  background-color: violet;
+
+  /* Cũng ảnh hưởng đến phần tử xung quanh */
+  /* Căn chỉnh theo khung trình duyệt */
+  /* Cũng có thẻ đồng thời áp dụng 4 thuộc tính - tạo lớp phủ toàn bộ màn hình */
+  position: fixed;
+
+  bottom: 50px;
+  right: 50px;
+}
+
+/* Sticky */
+/* Cần có 1 container có chiều cao cụ thể */
+/* Cho phép 1 phần tử có vị trí linh hoạt trên trang */
+
+.container {
+  height: 1000px;
+  background-color: rgb(196, 196, 22);
+}
+.sticky {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: sticky;
+  left: 50px;
+  top: 50px;
+}

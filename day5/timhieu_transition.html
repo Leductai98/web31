@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu Transition, Animation, Transform</title>
+  </head>
+  <body>
+    <h1>Transition</h1>
+    <h2>Transition là gì?</h2>
+    <img src="./image/transit.png" alt="" />
+    <p>
+      CSS transition có nhiệm vụ điều khiển tốc độ của hiệu ứng sau khi đã thay
+      đổi các thuộc tính sẵn có trong CSS. Khi đó, mọi hoạt động có liên quan
+      đến quá trình chuyển tiếp giữa các trạng thái thường được xem là chuyển
+      tiếp tiềm ẩn. Bởi vì, những trạng thái nằm giữa các trạng thái bắt đầu và
+      kết thúc đều đã được ngầm định bởi trình duyệt.
+    </p>
+    <p>
+      CSS transitions còn giúp cho bạn có thể quyết định xem thuộc tính nào có
+      hiệu ứng và khi nào thì hiệu ứng sẽ được bắt đầu nhờ cách thiết lập thời
+      gian trì hoãn và delay. Và các câu hỏi sẽ được đặt ra là: bao lâu thì quá
+      trình chuyển đổi kết thúc, cách chuyển đổi diễn ra như thế nào, tuyến tính
+      ra sao và khi nào cần bắt đầu,...
+    </p>
+    <h2>Thuộc tính được dùng để định nghĩa Transition là gì?</h2>
+    <h4>transition-property</h4>
+    <p>
+      Có nhiệm vụ thực hiện chỉ định tên cho các thuộc tính CSS nhằm áp dụng các
+      hiệu ứng. Khi các thuộc tính này đã được liệt kê thì mọi hiệu ứng đều sẽ
+      nằm trong thời gian chuyển đổi. Mọi thay đổi của thuộc tính khác đều sẽ
+      xảy ra và được xem như thường lệ.
+    </p>
+    <h4>transition-duration</h4>
+    <p>
+      Thuộc tính này giúp chỉ định thời gian mà các chuyển tiếp sẽ xảy ra. Bởi
+      vậy, bạn có thể chỉ định trong một khoảng thời gian duy nhất khi cần áp
+      dụng cho tất cả thuộc tính. Hoặc, những giá trị sẽ cho phép các thuộc tính
+      thực hiện chuyển đổi dần theo khoảng thời gian khác nhau.
+    </p>
+    <h4>transition-timing-function</h4>
+    <p>
+      Hỗ trợ chỉ định cho một hàm để có thể định nghĩa cách cho các giá trị
+      trung gian khác dành cho thuộc tính đã được tính toán ra sao. Timing
+      functions sẽ giúp bạn có thể xác định được các giá trị trung gian của
+      những chuyển đổi đã được tính toàn sẵn.
+    </p>
+    <h4>transition-delay</h4>
+    <p>
+      Nó giúp bạn xác định được một khoảng thời gian khi trì hoãn giữa thời gian
+      của một thuộc tính và những lúc chuyển tiếp rồi thực sự bắt đầu nó.
+    </p>
+    <h1>Animation</h1>
+    <h2>Animation là gì</h2>
+    <p>
+      Animation được hiểu là hiệu ứng chuyển động, sử dụng để tạo hiệu ứng di
+      chuyển cho các phần tử và được ứng dụng khá nhiều trong các website hiện
+      nay. Để tạo một chuyển động Animation, bạn cần phải có các keyframe. Mỗi
+      keyframe sẽ được chạy ở một thời điểm xác định và trong keyframe đó nó quy
+      định việc phần tử sẽ di chuyển ra sao.
+    </p>
+    <h4>Quy tắc Keyframe</h4>
+    <p>
+      Bên trong quy tắc này, bạn xác định các keyframe để quy định việc phần tử
+      sẽ chuyển động ra sao tại mỗi thời điểm nhất định. Cú pháp của keyframe:
+    </p>
+    <img src="./image/keyframe.png" alt="" />
+    <h4>Thuộc tính animation-delay</h4>
+    <p>
+      Thuộc tính animation-delay sử dụng để xác định khoảng thời gian trì hoãn
+      giữa thời gian một thuộc tính thay đổi và lúc hiệu ứng animation thực sự
+      bắt đầu.
+    </p>
+    <h4>Thuộc tính animation-iteration-count</h4>
+    <p>
+      Thuộc tính animation-iteration-count sử dụng để thiết lập số lần thực hiện
+      một animation. Giá trị thường là:
+    </p>
+    <ul>
+      <li>Một số lần nhất định</li>
+      <li>infinite: animation lặp lại liên tục và vô hạn</li>
+    </ul>
+    <h4>Thuộc tính animation-direction</h4>
+    <p>
+      Thuộc tính animation-direction sử dụng để xác định chiều chạy của
+      animation. Các giá trị mà animation-direction có thể nhận là:
+    </p>
+    <ul>
+      <li>
+        normal: animation di chuyển bình thường tiến về phía trước (mặc định)
+      </li>
+      <li>reverse: animation di chuyển theo hướng ngược lại, lui về sau.</li>
+      <li>
+        alternate: animation di chuyển tiến về trước, sau đó lui theo hướng
+        ngược lại
+      </li>
+      <li>
+        alternate-reverse: animation di chuyển ngược lại trước, rồi đổi chiều
+        tiến về trước.
+      </li>
+    </ul>
+    <h4>Thuộc tính animation-timing-function</h4>
+    <p>
+      Thuộc tính animation-timing-function dùng để xác định tốc độ thay đổi khi
+      hiệu ứng di chuyển. Các giá trị có sẵn như sau:
+    </p>
+    <ul>
+      <li>
+        ease: tạo hiệu ứng chuyển đổi khi bắt đầu thì chậm sau đó nhanh dần và
+        gần kết thúc lại chậm dần (giá trị mặc định).
+      </li>
+      <li>
+        linear: tạo hiệu ứng chuyển đổi từ lúc bắt đầu với lúc kết thúc tốc độ
+        là như nhau.
+      </li>
+      <li>ease-in: tạo hiệu ứng chuyển đổi chậm lúc bắt đầu.</li>
+      <li>ease-out: tạo hiệu ứng chuyển đổi chậm lúc kết thúc.</li>
+      <li>
+        ease-in-out: tạo hiệu ứng chuyển đổi chậm cả lúc bắt đầu và kết thúc.
+      </li>
+      <li>
+        cubic-bezier(n,n,n,n): cho phép bạn xác định một giá trị của riêng mình
+        theo hàm bezier
+      </li>
+    </ul>
+    <h4>Thuộc tính animation-fill-mode</h4>
+    <p>
+      Animation CSS không gây ảnh hưởng đến phần tử trước khi chạy keyframe đầu
+      tiên và sau khi keyframe cuối cùng kết thúc. Và thuộc tính
+      animation-fill-mode sử dụng để thay đổi trạng thái của phần tử trước khi
+      bắt đầu sau khi kết thúc Animation.
+    </p>
+    <p>Các giá trị có sẵn như sau:</p>
+    <ul>
+      <li>
+        none: khi animation không hoạt động thì nó sẽ giữ nguyên trạng thái bất
+        động của phần tử, không thêm một style nào vào thành phần (mặc định).
+      </li>
+      <li>
+        forwards: khi animation không hoạt động sau khi kết thúc animation, giá
+        trị này sẽ apply các thuộc tính của lần cuối cùng xuất hiện trong
+        keyframe vào trạng thái của phần tử (phụ thuộc vào animation-direction
+        và animation-iteration-count).
+      </li>
+      <li>
+        backwards: khi animation không hoạt động trước khi bắt đầu animation
+        (đang trong thời gian delay), giá trị này sẽ apply các thuộc tính của
+        lần xuất hiện đầu tiên trong keyfame vào trạng thái của phần tử (phụ
+        thuộc vào thuộc tính anmation-direction).
+      </li>
+      <li>both: kết hợp cả forwards và backwards cho trạng thái phần tử.</li>
+    </ul>
+    <h1>Transform</h1>
+    <h2>2D Transform CSS là gì?</h2>
+    <p>
+      2D Transform CSS là những thuộc tính được dùng để xử lý các hiệu ứng di
+      chuyển 2D của các phần tử trên website.
+    </p>
+    <h2>Chức năng của các thuộc tính trong 2D Transform CSS</h2>
+    <img src="./image/thuoctinhtransform.png" alt="" />
+  </body>
+</html>
