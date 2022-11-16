@@ -44,13 +44,13 @@ img {
   height: 27px;
   line-height: 27px;
 }
-.root-item:hover {
+.root-item:hover > span {
   cursor: pointer;
   background-color: rgb(235, 231, 231);
+  color: chocolate;
 }
 .root-item:hover .sub-menu-1 {
   display: block;
-  cursor: pointer;
 }
 .sub-menu-1 {
   display: none;
@@ -66,6 +66,11 @@ img {
 }
 .sub-menu-1-item {
   list-style: none;
+}
+.sub-menu-1-item:hover > span {
+  background-color: rgb(235, 231, 231);
+  color: chocolate;
+  cursor: pointer;
 }
 .sub-menu-1-item span {
   line-height: 27px;
@@ -89,6 +94,10 @@ img {
 }
 .sub-menu-2-item {
   list-style: none;
+}
+.sub-menu-2-item:hover > span {
+  color: chocolate;
+  cursor: pointer;
 }
 span {
   display: block;
