@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form>
+        <div class="form-heading">Đăng ký tài khoản</div>
+      <form-group>
+        <div class="input-group">
+          <div class="form-field">
+            <label for="username">Tên tài khoản</label>
+            <input type="text" name="username" id="username" />
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="form-field">
+            <label for="password">Mật khẩu</label>
+            <input type="password" name="password" id="password" />
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="form-field">
+            <label for="re-password">Xác nhận mật khẩu</label>
+            <input type="password" name="re-password" id="re-password" />
+          </div>
+        </div>
+        <div>Giới tính</div>
+        <div class="input-group">
+          <div class="form-field">
+            <input type="radio" name="gender" value="male" id="male" />
+            <label for="male">Nam</label>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="form-field">
+            <input type="radio" name="gender" value="female" id="female" />
+            <label for="female">Nữ</label>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="form-field">
+            <input type="radio" name="gender" value="other" id="other" />
+            <label for="other">Khác</label>
+          </div>
+        </div>
+        <div class="form-file">
+          <input type="checkbox" id="agree" />
+          <label for="agree">Đồng ý</label>
+          <button>Đồng ý điều khoản</button>
+        </div>
+      </form-group>
+    </form>
+  </body>
+</html>

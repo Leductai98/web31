@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Table</title>
+    <style>
+      /* Border, border-collapse, padding */
+      table {
+        border-collapse: collapse;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid rgb(220, 205, 205);
+        text-align: center;
+      }
+      td {
+        padding: 10px;
+      }
+      tbody tr:nth-child(2n + 1) {
+        background-color: darkred;
+      }
+      td:nth-child(2n) {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Danh sách học viên lớp Web 31
+      </caption>
+
+      <thead>
+        <tr>
+          <th>Họ tên</th>
+          <th>Giới tính</th>
+          <th>Quê quán</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Nguyễn Xuân Ba</td>
+          <td>Nam</td>
+          <td>Nam định</td>
+        </tr>
+        <tr>
+          <td>Hoàng Gia Phong</td>
+          <td>Nam</td>
+          <td>Hà Nội</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="2">Tổng số học viên</td>
+          <td>2</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

@@ -32,6 +32,7 @@ img {
   background-color: #fff;
 }
 .menu-root {
+  width: 200px;
   padding: 8px 0 12px;
   list-style: none;
   height: 100%;
@@ -122,10 +123,18 @@ span {
 .root-item:hover > .icon {
   display: block;
 }
-.sub-menu-1-item:hover > .icon {
+.sub-menu-1-item:hover .icon {
   display: block;
 }
 .icon {
   display: none;
   width: 28px;
+}
+.root-item > .icon {
+  position: absolute;
+  left: 185px;
+}
+.sub-menu-1-item > .icon {
+  position: absolute;
+  left: 177px;
 }

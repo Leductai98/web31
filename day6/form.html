@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form>
+      <!-- label: Nhãn cho người dùng biết nên nhập gì vào ô input, label yêu cầu link đến id của input/textarea/select -->
+      <!--text: Văn bản ngắn thường dùng cho username, họ tên, email, tên sản phẩm
+      -->
+      <input type="text" value="text" />
+
+      <input type="password" value="" />
+      <!-- Nhập giá trị ngày tháng -->
+      <input type="date" />
+
+      <!-- Tải lên các file hình ảnh, text,...-->
+      <input type="file" />
+
+      <!-- Cung cấp các tùy chọn có sẵn cho người dùng lựa chọn -->
+      <!-- Checkbox => Chọn nhiều -->
+      <!-- Khi chọn thì có giá trị là gì -->
+      <!-- Name: Tất cả các tùy chọn cho cùng 1 dữ liệu thì phải có chung name -->
+      <input type="checkbox" name="hobbies" value="game" />
+      <input type="checkbox" name="hobbies" value="girl" />
+      <input type="checkbox" name="hobbies" value="sport" />
+
+      <!-- Chỉ chọn 1 -->
+      <!-- Chọn giới tính -->
+      <input type="radio" name="Gender" value="male" />
+      <input type="radio" name="Gender" value="female" />
+      <input type="radio" name="Gender" value="other" />
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <select name="" id="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="" selected>3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+      </select>
+      <!-- name: Tên dữ liệu 
+            value: Giá trị mặc định
+            id: Liên kết 1 phần tử form với 1 label cụ thể
+            type (cho input): Loại dữ liệu/Cách hiển thị/Cách nhập dữ liệu -->
+      <!-- Submit => reload trang -->
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
