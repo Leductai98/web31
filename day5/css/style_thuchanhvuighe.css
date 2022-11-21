@@ -6,46 +6,60 @@
 img {
   max-width: 100%;
   vertical-align: middle;
-  height: auto;
+  max-height: 100%;
 }
 .movie-list {
+  font-family: "Open Sans", sans-serif;
   width: 1320px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 10px;
 }
 .movie {
   width: 320px;
   height: 180px;
   position: relative;
+  overflow: hidden;
 }
 .movie:hover .movie-btn-play {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .movie-btn-play {
   display: none;
+  transition: display 0.5s 0 linear;
   position: absolute;
-  top: 10px;
-  left: 10px;
   font-size: 50px;
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  font-size: 200%;
+  font-size: 350%;
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 10px #fff;
   cursor: pointer;
+  color: white;
   z-index: 1;
-  left: 100px;
-  top: 50px;
+  left: 10px;
+  top: 20px;
+}
+.bi bi-play-fill {
+  transform: scale(2);
 }
 .thumnail {
+  max-width: 100%;
   position: absolute;
+  opacity: 0.9;
+  transition: transform 1s 0s linear;
+}
+.movie:hover .thumnail {
+  transform: scale(1.2);
+  opacity: 1;
 }
 .description {
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
   height: 81px;
   padding: 30px 15px 10px;
@@ -76,55 +90,159 @@ img {
   font-size: 12px;
 }
 h2 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 50px;
   font-size: 150%;
   font-weight: 300;
   padding-left: 20px;
 }
 nav {
+  font-family: "Open Sans", sans-serif;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-}
-nav .container {
   display: flex;
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 rgb(0, 0, 0, 0.5);
+  height: 60px;
+  left: 0;
+  min-height: 40px;
+  padding: 10px 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
 
-.nav-link,
-.dropdown-button {
-  display: block;
-  padding: 8px 16px;
-  background-color: rgb(71, 24, 61);
-  color: #fff;
-  text-transform: uppercase;
-}
-.nav-link:hover,
-.nav-dropdown:hover .dropdown-button {
-  background-color: aqua;
-  cursor: pointer;
-}
-.nav-dropdown {
+.nav-left {
   position: relative;
 }
-.nav-dropdown:hover .dropdown-menu {
-  display: block;
+.container {
+  display: flex;
+  margin: auto;
+  height: 40px;
+  margin-left: 40px;
 }
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+
+.nav-link {
+  border-radius: 15px;
+  margin: 5px;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  height: 30px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.logo {
+  overflow: hidden;
+  margin-top: -5px;
+  margin-left: 20px;
+  height: 50px;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.9;
+}
+
+.container-banner {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 100px;
+  width: 1320px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.banner-big {
+  width: 1320px;
+  height: 300px;
+  display: flex;
+  gap: 10px;
+}
+
+.big-1 {
+  width: 980px;
+  height: 290px;
+  position: relative;
+}
+.big-1-thumnail {
+  height: 100%;
   width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: transparent;
 }
-.dropdown-item {
-  display: block;
-  padding: 10px 16px;
+
+.big-1-info {
+  color: #fff;
+  position: absolute;
+  width: 950px;
+  height: 48.563px;
+  padding: 40px 15px 5px 15px;
+  z-index: 2;
+  top: 200px;
+  opacity: 2;
 }
-.dropdown-item:hover {
-  background-color: red;
-  cursor: pointer;
+
+.big-1-info-view {
+  font-size: 12px;
+}
+
+.big-1-info-title {
+  font-size: 20px;
+  width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.big-2 {
+  height: 290px;
+  width: 320px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background: radial-gradient(circle at 93% 5%, #0b4f65, #21c8f6 90%);
+  color: #fff;
+  padding: 10px;
+}
+.big-2-thumnail > img {
+  width: 320px;
+  height: 270px;
+  vertical-align: middle;
+}
+
+.banner-small {
+  width: 1310px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-1 {
+  display: flex;
+  background: linear-gradient(180deg, #f44881, #ec454f);
+  height: 90px;
+  padding: 10px;
+  width: 310px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.smail-1-thumnail {
+  width: 70px;
+  height: 70px;
+}
+
+.small-1-title {
+  width: 240px;
+  color: #fff;
+  font-weight: 100;
+  max-height: 60px;
+  overflow: hidden;
+  padding: 0 10px;
+  text-align: left;
+  font-size: 14px;
 }

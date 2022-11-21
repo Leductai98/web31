@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: min(100%, 500px);
+  height: 200px;
+  background-color: rgb(30, 138, 210);
+
+  /* Biến đổi phần tử */
+  /*transform: rotate(90deg);
+  scale: 1;
+  translate: 1000px 100px;*/
+}
+
+

@@ -1,0 +1,28 @@
+/* Khai báo
+
+- Nên khai báo ở trên element cấp cao nhất: html, body, :root
+- Cú pháp: bắt đầu bằng --
+- Sử dụng var)--custom-property-name);
+*/
+
+/* html */
+:root {
+  --primary-color: blue;
+  --secondary-color: green;
+
+  --primary-font: "Cascadia Code", mono;
+  --secondary-font: "Time New Roman", san-serif;
+
+  --column-gutter: 30px;
+  ---row-gitter: 30px;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.box {
+  height: 300px;
+  background-image: linear-gradient(to right, red, green);
+}

@@ -1,0 +1,81 @@
+/* Khai báo
+
+- Nên khai báo ở trên element cấp cao nhất: html, body, :root
+- Cú pháp: bắt đầu bằng --
+- Sử dụng var)--custom-property-name);
+*/
+
+/* html */
+:root {
+  --primary-color: #fff;
+  --secondary-color: green;
+
+  --primary-font: "Cascadia Code", mono;
+  --secondary-font: "Time New Roman", san-serif;
+
+  --column-gutter: 30px;
+  ---row-gitter: 30px;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.box {
+  height: 300px;
+  background-image: linear-gradient(45deg, blue, red);
+
+  transition: background-image 10s 0s linear;
+}
+/* Transition thường kết hợp với các bộ chọn: hover. :focus 
+Transition thường nên đặt trên các bộ chọn thông thường
+
+Ví dụ::
+
+.box => transition
+.box:hover => thay đổi giá trị
+- Duration thường nên để 0.2s - 0.5s
+- KHÔNG PHẢI TẤT CẢ THUỘC TÍNH ĐỀU ÁP DỤNG ĐƯỢC TRANSITION
+- Transition sử dụng với các hiệu ứng cần thao tác từ phía người dùng
+*/
+
+.box:hover {
+  background-image: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(40, 34, 11, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+@keyframes scale {
+  /* step */
+  from {
+    /*properties*/
+    width: 0;
+    height: 0;
+    transform: rotate(0deg);
+    opacity: 0;
+    top: 300px;
+  }
+  50% {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+  }
+  to {
+    width: 0;
+    height: 0;
+    transform: rotate(360deg);
+    opacity: 0;
+    top: 300px;
+  }
+}
+
+img {
+  position: fixed;
+  animation: scale 2s linear 0s infinite;
+}
