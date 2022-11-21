@@ -167,7 +167,7 @@ a {
   position: relative;
 }
 .big-1-thumnail {
-  height: 100%;
+  filter: brightness(0.8);
   width: 100%;
   position: absolute;
   left: 0;
@@ -197,6 +197,8 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-weight: 500;
+  opacity: 3;
 }
 
 .big-2 {
