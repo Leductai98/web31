@@ -232,7 +232,7 @@ h2 {
 }
 
 .sec-heading {
-  width: 1140px;
+  width: 100%;
   margin-bottom: 70px;
   position: relative;
   text-align: center;
@@ -475,7 +475,7 @@ a:focus {
   width: 100%;
 }
 
-.team .single-memb:hover .memb-details {
+.single-memb:hover .memb-details {
   margin-top: -84px;
 }
 
