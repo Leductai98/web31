@@ -475,8 +475,9 @@ a:focus {
   width: 100%;
 }
 
-.single-memb:hover .memb-details {
+.banner-1-4:hover .memb-details {
   margin-top: -84px;
+  z-index: 2;
 }
 
 .memb-details {
@@ -495,16 +496,13 @@ a:focus {
 }
 
 h6 {
-  color: #263a41;
-  font-size: 22px;
-  margin-bottom: 0;
-}
-
-h6 {
   font-family: "Rufina", serif;
   font-weight: 700;
   line-height: 1.2;
   margin-top: 0;
+  color: #263a41;
+  font-size: 22px;
+  margin-bottom: 0;
 }
 
 .memb-details span {
@@ -512,3 +510,16 @@ h6 {
   margin-bottom: 15px;
 }
 
+.banner-1-4:hover .memb-social {
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.memb-social {
+  visibility: hidden;
+  margin-top: -30px;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}

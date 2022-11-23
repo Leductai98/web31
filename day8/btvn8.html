@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu về JavaScript</title>
+  </head>
+  <body>
+    <h2>1. Giới thiệu về JavaScript</h2>
+    <p>
+      JavaScript là ngôn ngữ lập trình phổ biến dùng để tạo ra các trang web
+      tương tác. Được tích hợp và nhúng vào HTML giúp website trở nên sống động
+      hơn.
+    </p>
+    <h4>Tại sao lại được gọi là JavaScript</h4>
+    <p>
+      Khi JavaScript được tạo ra, ban đầu nó có tên khác: “LiveScript”. Nhưng
+      Java đã rất phổ biến vào thời điểm đó, vì vậy người ta quyết định rằng
+      việc định vị một ngôn ngữ mới là “em trai” của Java sẽ giúp ích.
+    </p>
+    <p>
+      Nhưng khi nó phát triển, JavaScript đã trở thành một ngôn ngữ hoàn toàn
+      độc lập với đặc điểm kỹ thuật riêng của nó được gọi là ECMAScript và giờ
+      đây nó không liên quan gì đến Java cả.
+    </p>
+    <p>
+      Today, JavaScript can execute not only in the browser, but also on the
+      server, or actually on any device that has a special program called the
+      JavaScript engine.
+    </p>
+    <h2>2. Cách nhúng mã JavaScript trong trang web</h2>
+    <p>Có 3 cách để nhúng mã JavaScript</p>
+    <h4>External Javascript</h4>
+    <p>
+      External Javascript là phương pháp mà trong đó, các đoạn code Javascript
+      sẽ được lưu vào một tập tin có phần mở rộng là .js và kết nối với trang
+      HTML thông qua phần tử thẻ script.
+    </p>
+    <img src="./image/external.png" alt="" />
+    <h4>Internal Javascript</h4>
+    <p>
+      Internal Javascript là phương pháp mà trong đó, các đoạn code Javascript
+      được đặt trong phần tử thẻ script của một trang HTML.
+    </p>
+    <img src="./image/internal.png" alt="" />
+    <h4>Inline Javascript</h4>
+    <p>
+      Inline Javascript là phương pháp mà trong đó, code Javascript sẽ được chèn
+      trực tiếp vào phần tử HTML thông qua các thuộc tính HTML thuộc nhóm event
+      (Ví dụ: onload, onlick, onmouseover, onmouseout...)
+    </p>
+    <img src="./image/inline.png" alt="" />
+    <h2>3. Sử dụng Chome DevTool (console)</h2>
+    <p>
+      Tab Console hiển thị code JavaScript. Nó cung cấp cho bạn thông tin về các
+      yếu tố tương tác trên một trang. Trong tab console, bạn có thể viết
+      JavaScript để tương tác với trang web bạn đang xem và nó cũng cho phép bạn
+      viết thông báo cho chính mình bằng JavaScript của các trang web bạn đang
+      xây dựng, sau đó sẽ hiển thị trong tab console để cho biết rằng JS đã được
+      thực thi
+    </p>
+    <img src="./image/console.png" alt="" />
+    <h2>4. Các kiểu dữ liệu, biểu diễn giá trị trong JavaScript</h2>
+    <p>Có 8 kiểu dữ liệu</p>
+    <ul>
+      <li>Number: Các số nguyên hoặc số thực. Ví dụ: 5 hoặc 5.05</li>
+      <li>
+        String: là các text như “Các kiểu dữ liệu trong JavaScript”, text có thể
+        có một hoặc nhiều ký tự.
+      </li>
+      <li>Boolean: chỉ có 2 giá trị là true hoặc false.</li>
+      <li>Undefine: là các giá trị không xác định.</li>
+      <li>Null: đơn giản là không có giá trị nào cả.</li>
+      <li>
+        Object: Thể hiện một đối tượng và các thuộc tính có thể truy cập đến.
+      </li>
+      <li>Array: Nhóm các giá trị giống nhau.</li>
+      <li>RegExp: Biểu thức chính quy.</li>
+    </ul>
+    <h2>5. Toán tử</h2>
+    <h4>1. Toán tử số học</h4>
+    <img src="./image/sohoc.png" alt="" />
+    <img src="./image/vdsohoc.png" alt="" />
+    <h4>2. Toán tử so sánh</h4>
+    <img src="./image/sosanh.png" alt="" />
+    <img src="./image/vdsosanh.png" alt="" />
+    <h4>3. Toán tử logic</h4>
+    <img src="./image/logic.png" alt="" />
+    <img src="./image/vdlogic.png" alt="" />
+    <h4>4. Toán tử gán</h4>
+    <img src="./image/gan.png" alt="" />
+    <h4>5. Toán tử ba ngôi</h4>
+    <img src="./image/bangoi.png" alt="" />
+    <img src="./image/vdbangoi.png" alt="" />
+    <h2>6. Chuyển đổi kiểu dữ liệu</h2>
+    <h4>1. Chuyển đổi bằng Javascript function</h4>
+    <p>
+      Chuyển đổi Numbers sang Strings <br />
+      Phương thức toàn cục String() có thể chuyển numbers sang strings.
+    </p>
+    <img src="./image/numberstring.png" alt="" />
+    <p>Phương thức toString() cũng thực hiện tương tự.</p>
+    <img src="./image/numbertostring.png" alt="" />
+    <p>
+      Chuyển đổi Booleans sang Strings <br />Phương thức toàn cục String() có
+      thể chuyển booleans sang strings
+    </p>
+    <img src="./image/boleanstring.png" alt="" />
+    <p>Phương thức toString() cũng thực hiện tương tự.</p>
+    <img src="./image/boleantostring.png" alt="" />
+    <p>
+      Chuyển đổi Dates sang Strings <br />
+      Phương thức toàn cục String() có thể chuyển dates sang strings.
+    </p>
+    <img src="./image/datestring.png" alt="" />
+    <p>Phương thức toString() cũng thực hiện tương tự.</p>
+    <img src="./image/datetostring.png" alt="" />
+    <p>
+      Chuyển đổi Strings sang Numbers <br />Phương thức toàn cục String() có thể
+      chuyển strings sang numbers. <br />
+      Chuỗi chứa số (ví dụ : "3.14") chuyển sang numbers (3.14). <br />
+      Chuỗi rỗng chuyển thành 0. <br />Mọi trường hợp còn lại chuyển sang NaN
+      (Not a Number).
+    </p>
+    <img src="./image/number.png" alt="" />
+    <h4>Toán tử +</h4>
+    <p>Toán tử + có thể được sử dụng để chuyển một chuỗi sang số:</p>
+    <img src="./image/+.png" alt="" />
+    <p>
+      Nếu biến không thể được chuyển đổi, nó vẫn sẽ trở thành một số, nhưng với
+      giá trị NaN (Not a Number):
+    </p>
+    <img src="./image/cong.png" alt="" />
+    <p>
+      Chuyển đổi Booleans sang Numbers <br />
+      Phương thức toàn cục Number() cũng có thể chuyển booleans sang numbers.
+    </p>
+    <img src="./image/bn.png" alt="" />
+    <p>
+      Chuyển đổi Dates sang Numbers <br />
+      Phương thức toàn cục Number() có thể được dùng để chuyển dates sang
+      numbers.
+    </p>
+    <img src="./image/dn.png" alt="" />
+    <h4>2. Tự động chuyển đổi kiểu dữ liệu</h4>
+    <p>
+      Khi JavaScript cố gắng hoạt động trên loại dữ liệu "wrong", nó sẽ cố gắng
+      chuyển đổi giá trị thành loại "right".
+    </p>
+    <img src="./image/tudong1.png" alt="" />
+    <p>
+      Tự động chuyển sang string <br />
+      JavaScript tự động gọi hàm toString () của biến khi hiển thị một đối tượng
+      hoặc một biến:
+    </p>
+    <img src="./image/tudong2.png" alt="" />
+    <p>
+      Numbers và booleans cũng được chuyển, nhưng điều này là không được nhìn
+      thấy:
+    </p>
+    <img src="./image/tudong3.png" alt="" />
+    <h4>Bảng chuyển đổi kiểu dữ liệu trong JavaScript</h4>
+    <p>
+      Bảng này thể hiện kết quả chuyển đổi các giá trị khác nhau trong
+      Javascript sang Number, String, and Boolean:
+    </p>
+    <img src="./image/bang.png" alt="" />
+    <p>
+      Giá trị trong nháy kép biểu thị là giá trị chuỗi. <br />
+
+      Giá trị đỏ biểu thị giá trị lập trình viên có thể không mong đợi.
+    </p>
+    <h2>7. Biến</h2>
+    <h4>1. Biến là gì ?</h4>
+    <p>
+      Giống như nhiều ngôn ngữ lập trình khác, JavaScript có các biến. Các biến
+      có thể được coi là các thùng chứa có tên. Bạn có thể đặt dữ liệu vào các
+      vùng chứa này và sau đó tham khảo dữ liệu chỉ bằng cách đặt tên vùng chứa.
+    </p>
+    <h4>2. Khai báo biến</h4>
+    <p>Để khai báo một biến ta sử dụng từ khóa const, let, var.</p>
+    <p>
+      const được sử dụng để khai báo 1 hằng số, và giá trị của nó không thay đổi
+      trong suốt chương trình.
+    </p>
+    <p>
+      let khai báo biến chỉ có thể truy cập được trong block bao quanh nó được
+      xác định bằng cặp {}.
+    </p>
+    <p>
+      var khai báo biến có thể truy cập ở phạm vi hàm số hoặc bên ngoài hàm số,
+      toàn cục.
+    </p>
+    <p>
+      Giống như ngôn ngữ khác, cách đặt tên biến của JS cũng phải tuân theo 1 số
+      quy tắc sau :
+    </p>
+    <ul>
+      <li>
+        Tên biến phải là các chữ không dấu viết hoa hoặc viết thường, các chữ số
+        từ 0-9 và dấu gạch dưới () và kí hiệu $.
+      </li>
+      <li>
+        Tên biến bắt đầu phải là chữ hoặc dấu gạch dưới (_), nếu bắt đầu bằng số
+        là sai.
+      </li>
+      <li>
+        Không thể sử dụng các từ dành riêng (như từ khóa JavaScript) làm tên.
+      </li>
+      <li>Các tên có phân biệt chữ hoa chữ thường</li>
+    </ul>
+  </body>
+</html>
