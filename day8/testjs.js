@@ -3,3 +3,5 @@ function tinhtongab(a, b) {
   return result;
 }
 console.log(tinhtongab(2, 3))
+{let x=1;}
+let x=3;
