@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu</title>
+  </head>
+  <body>
+    <h2>Cấu trúc điều khiển</h2>
+    <h4>Cấu trúc điều khiển là gì</h4>
+    <p>
+      Cấu trúc điều khiển (Control Structure) là một trong các đặc trưng cơ bản
+      của phương pháp lập trình cấu trúc. Trong đó, người ta sử dụng 3 cấu trúc
+      điều khiển để tạo nên logic của chương trình. Mọi vấn đề về logic đều được
+      giải quyết bằng cách phối hợp 3 cấu trúc: Cấu trúc tuần tự (Sequence
+      structures), Cấu trúc chọn (Selection structures) và cấu trúc lặp
+      (Iterative structures).
+    </p>
+    <p>
+      Cấu trúc điều khiển (Câu lệnh điều khiển) cho phép một lập trình viên xác
+      định thứ tự thực thi các lệnh trong mỗi chương trình, thể hiện qua việc:
+    </p>
+    <ul>
+      <li>Bỏ qua một vài câu lệnh để thực thi các câu lệnh khác</li>
+      <li>Lặp lại một hoặc khối lệnh trong khi điều kiện còn đúng</li>
+    </ul>
+    <h2>Câu lệnh điều kiện If – else trong JavaScript</h2>
+    <p>
+      <bold>Câu lệnh điều kiện If – else trong JavaScript</bold> được sử dụng để
+      kiểm tra một biểu thức điều kiện nào đó có đúng hay không, nếu đúng thì
+      thực thi những câu lệnh bên trong khối lệnh if và ngược lại nếu sai thì nó
+      sẽ bỏ qua những câu lệnh đó. Cùng tìm hiểu chi tiết về câu lệnh này nhé!
+    </p>
+    <h4>Lệnh If – else</h4>
+    <h4>Các lệnh điều kiện</h4>
+    <p>
+      Bạn thường rất hay sử dụng viết mã, khi bạn muốn thực hiện các hành động
+      khác nhau đối với các quyết định (điều kiện) khác nhau. Bạn có thể sử dụng
+      các lệnh điều kiện trong mã của mình để làm điều này. Trong JavaScript,
+      chúng ta có những lệnh điều kiện sau đây:
+    </p>
+    <ul>
+      <li>
+        Sử dụng if để xác định một khối mã được thực thi, nếu một biểu thức điều
+        kiện được đánh giá là true
+      </li>
+      <li>
+        Sử dụng else để xác định một khối mã được thực thi, nếu điều kiện được
+        chỉ ra trong if là sai
+      </li>
+      <li>
+        Sử dụng else if nhằm xác định một điều kiện mới để kiểm tra, nếu các
+        điều kiện trước đó là sai
+      </li>
+    </ul>
+    <h4>Lệnh if</h4>
+    <p>
+      Sử dụng lệnh if để xác định một khối mã JavaScript sẽ được thực thi nếu
+      điều kiện chỉ ra là đúng.
+    </p>
+    <img src="./img/if.png" alt="" />
+    <h4>Phần mở rộng else</h4>
+    <p>
+      Sử dụng phẩn mở rộng else để xác định một khối mã được thực thi nếu điều
+      kiện là sai.
+    </p>
+    <img src="./img/else.png" alt="" />
+    <h4>Phần mở rộng else if</h4>
+    <p>
+      Sử dụng mở rộng else if để chỉ định một điều kiện mới nếu các điều kiện
+      trước đó là sai.
+    </p>
+    <img src="./img/elseif.png" alt="" />
+    <h2>Câu lệnh Switch – Case trong JavaScript</h2>
+    <p>
+      Câu lệnh <bold>switch – case</bold> trong JavaScript dùng để xác định một
+      danh sách các trường hợp và trong mỗi trường hợp sẽ có một đoạn mã, khi
+      giá trị của bạn trùng khớp với trường hợp nào thì đoạn mã của trường hợp
+      đó sẽ được thực thi.
+    </p>
+    <h4>Câu lệnh switch</h4>
+    <p>
+      Lệnh switch được sử dụng để thực hiện các hành động khác nhau dựa trên các
+      điều kiện khác nhau.
+    </p>
+    <h4>Câu lệnh switch – case trong JavaScript</h4>
+    <p>Sử dụng lệnh switch để chọn một trong số nhiều khối mã được thực thi.</p>
+    <img src="./img/switch-case.png" alt="" />
+    <p>Dưới đây là cách hoạt động của lệnh:</p>
+    <ul>
+      <li>Biểu thức (expression) switch được đánh giá chỉ một lần.</li>
+      <li>
+        Giá trị của biểu thức được so sánh với các giá trị tương ứng với mỗi
+        case (trường hợp).
+      </li>
+      <li>Nếu khớp với case nào, khối mã thuộc case đó sẽ được thực thi.</li>
+    </ul>
+    <h4>Từ khóa break</h4>
+    <p>
+      Khi trình thông dịch (interpreter) mã JavaScript gặp từ khóa
+      <bold>break</bold>, nó thoát ra khỏi khối switch. <br />
+
+      Điều này sẽ làm ngừng thực thi thêm các mã và các case bên trong khối.
+      <br />
+
+      Lưu ý: Khi tìm thấy một case (trường hợp) phù hợp, và công việc được thực
+      hiện, đó là lúc cần dừng lại. Sẽ không cần kiểm tra thêm các case khác
+      nữa.
+    </p>
+    <h4>Từ khóa default</h4>
+    <p>
+      Từ khóa default chỉ định mã sẽ thực thi nếu kết quả của biểu thức
+      (expression) không phù hợp với case (trường hợp) nào
+    </p>
+    <h2>Vòng lặp for</h2>
+    <p>Vòng lặp dùng để thực thi một hành động lặp đi lặp lại</p>
+    <h4>Cú pháp</h4>
+    <img src="./img/for.png" alt="" />
+    <ul>
+      <li>let i = 0 : khởi tạo biến cho vòng lặp</li>
+      <li>i < 10 : điều kiện để vòng lặp thực hiện</li>
+      <li>
+        i++ : tăng giá trị biến chạy lên 1 mỗi khi thực hiện xong hành động
+      </li>
+    </ul>
+    <h2>Vòng lặp while</h2>
+    <p>
+      Mục đích của vòng lặp while là để thực thi một lệnh hoặc khối code lặp đi
+      lặp lại miễn là expression – biểu thức là true. Một khi biểu thức trở
+      thành false, vòng lặp kết thúc
+    </p>
+    <h4>Cấu trúc</h4>
+    <img src="./img/while.png" alt="" />
+    <h2>Xử lý lỗi với try catch</h2>
+    <h4>Tại sao cần bắt lỗi và xử lý lỗi</h4>
+    <p>
+      <bold>JavaScript</bold> là một ngôn ngữ lỏng lẻo (dynamic), nó
+      <bold>không đưa ra lỗi</bold> trong lúc biên dịch. Một số trường hợp bạn
+      sẽ gặp phải lúc <code style="color: red">runtime error</code> cho những
+      biến không được định nghĩa hoặc là gọi những hàm chưa được định nghĩa,
+      hoặc là lỗi do nhập sai, lỗi xuất hiện một cách không lường trước được.
+    </p>
+    <h4>Try - Catch - Finally</h4>
+    <p>Cú pháp try - catch - finally:</p>
+    <img src="./img/try-catch.png" alt="" />
+    <p>Trong đó:</p>
+    <ul>
+      <li>try {...}: Bao quanh vùng code khả nghi, có khả năng sinh ra lỗi.</li>
+      <li>
+        catch { ... }: Xử lý thông tin nếu có lỗi. Kiểu như là log file hay là
+        log database hoặc xuất ra màn hình để người lập trình dễ kiểm soát. Hay
+        đơn giản là điều hướng, thông báo lỗi một cách thân thiện hơn cho người
+        dùng.
+      </li>
+      <li>
+        finally { ... }: Đoạn code này luôn luôn được gọi để xử lý các tác vụ
+        còn lại, ví dụ như reset biến hay các tác vụ khác.
+      </li>
+      ex: Là biến đại diện cho lỗi (bạn có thể đặt thế nào tùy thích). Nó sẽ
+      nhận sáu giá trị khác nhau có thể được trả về nếu chương trình bị lỗi.
+      (Chúng ta sẽ tìm hiểu ở phần dưới)
+    </ul>
+    <p>Một ví dụ về câu lệnh try - catch - finally:</p>
+    <img src="./img/vidu1.png" alt="" />
+    <p>Kết quả chạy trên trình duyệt như sau:</p>
+    <img src="./img/hienthividu.png" alt="" />
+    <p>Kết quả trên cho thấy:</p>
+    <p>+ Dòng lệnh đầu tiên là in ra: Lập trình JavaScript căn bản.</p>
+    <p>+ Khối try:</p>
+    <ul>
+      <li>Dòng lệnh thứ nhất đúng nên in ra text trên trình duyệt</li>
+      <li>
+        Dòng lệnh thứ hai sai từ khóa nên sẽ không thực thi và chuyển sang
+        <code style="color: red">catch</code> để bắt lỗi.
+      </li>
+      <li>
+        Dòng lệnh thứ ba sẽ không được thực thi vì dòng lệnh phía trên nó đã bị
+        lỗi.
+      </li>
+    </ul>
+    <p>+ Khối catch:</p>
+    <ul>
+      <li>
+        Dòng lệnh thứ nhất được in ra: Điều này có nghĩa là trong
+        <code style="color: red">try</code> có lỗi thì
+        <code style="color: red">catch</code> mới chạy.
+      </li>
+      <li>Dòng lệnh thứ hai: In ra lỗi bắt được ở dạng chuỗi.</li>
+    </ul>
+    <p>+ Khối finally:</p>
+    <ul>
+      <li>
+        Dòng lệnh trong này chạy vì cho dù có lỗi hay không có lỗi ở phần
+        <code style="color: red">try</code> thì đoạn code trong
+        <code style="color: red">finally</code> vẫn được thực thi.
+      </li>
+    </ul>
+  </body>
+</html>
