@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu về object</title>
+  </head>
+  <body>
+    <h3>Tổng quan về Object</h3>
+    <p>
+      Khác với các kiểu dữ liệu đơn giản - kiểu dữ liệu nguyên thủy (number,
+      string, boolean) chỉ chứa một giá trị đơn giản. Object là 1 kiểu dữ liệu
+      phức tạp - reference type có thể chứa nhiều kiểu dữ liệu khác nhau thông
+      qua cặp key, value. Value có thể là kiểu dữ liệu bất kỳ: number, string,
+      boolean, array, function, object…
+    </p>
+
+    <h3>hởi tạo object</h3>
+    <h4>Cách 1) Khởi tạo cố định</h4>
+    <img src="./img/khoitaocodinh.png" alt="" />
+    <h4>Cách 2) Khởi tạo bằng hàm tạo</h4>
+    <p>
+      Với cách thứ 2 này bạn khai báo một hàm gọi là hàm tạo rồi tạo ra đối
+      tượng bằng cú pháp new hamtao()
+    </p>
+    <p>
+      Trong hàm tạo hoặc các hàm thuộc đối tượng, sử dụng từ khóa this để tham
+      khảo đến đối tượng, thông qua nó truy cập các thuộc tính
+    </p>
+    <img src="./img/khoitaobangham.png" alt="" />
+    <h3>Phương thức trong đối tượng</h3>
+    <p>
+      Một đối tượng ngoài các thuộc tính ra nó còn chứa hàm gọi là phương thức,
+      ví dụ truy cập một hàm
+    </p>
+    <img src="./img/method.png" alt="" />
+    <p>
+      Phương thức thuộc về một đối tượng, đối tượng này được hàm tham khảo qua
+      từ khóa this
+    </p>
+    <img src="./img/person.png" alt="" />
+    <p>
+      Các phương thức bạn cũng có thể định nghĩa bên ngoài hàm khởi tạo, ví dụ
+    </p>
+    <img src="./img/person2.png" alt="" />
+    <h3>Setter và Getter</h3>
+    <p>
+      Một thuộc tính của của đối tượng còn thiết lập nó là hàm setter hoặc
+      getter, nếu là setter nó chỉ được gọi qua toán tử gán giá trị cho nó, nếu
+      là getter thì chỉ được gọi khi truy cập lấy giá trị thuộc tính.
+    </p>
+    <p>
+      Hàm setter định nghĩa bằng cách cho thêm set, hàm getter định nghĩa bằng
+      cách cho thêm get
+    </p>
+    <img src="./img/get.png" alt="" />
+    <h4>Tạo Setter/Getter trong hàm tạo</h4>
+    <p>
+      Trong trường hợp muốn định nghĩa setter / getter trong hàm tạo đối tượng
+      thì bạn cần định nghĩa theo nguyên tắc thêm một thuộc tính vào đối tượng
+      đã có với lệnh Object.defineProperty
+    </p>
+    <img src="./img/get2.png" alt="" />
+    <p>Ví dụ trên định nghĩa lại trong hàm tạo:</p>
+    <img src="./img/get3.png" alt="" />
+  </body>
+</html>

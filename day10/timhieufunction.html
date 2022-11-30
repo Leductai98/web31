@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu về function</title>
+  </head>
+  <body>
+    <p>
+      Function JavaScript (hàm trong JavaScript) là một thành phần không thể
+      thiếu trong cấu trúc chương trình. Hàm giúp chương trình trở nên rõ ràng,
+      dễ hiểu bằng cách gộp những đoạn code lặp lại. Nhờ vậy mà việc bảo trì
+      phần mềm cũng dễ dàng hơn.
+    </p>
+    <p>
+      Hàm trong JavaScript là một chương trình con giúp thực thi một công việc
+      cụ thể. Để định nghĩa hàm trong JavaScript, bạn sử dụng từ khoá function
+      với cú pháp là:
+    </p>
+    <img src="./img/ham.png" alt="" />
+    <p>Trong đó:</p>
+    <ul>
+      <li>function: là một từ khóa trong JavaScript dùng để định nghĩa hàm.</li>
+      <li>functionName: là tên của hàm (tên tự đặt).</li>
+      <li>
+        ([parameter1], [parameter2],...): danh sách các tham số của hàm (không
+        bắt buộc).
+      </li>
+      <li>
+        Cuối cùng là thân hàm, bao gồm một hoặc nhiều câu lệnh nằm trong cặp dấu
+        ngoặc {}.
+      </li>
+    </ul>
+    <h4>Biến cục bộ trong hàm</h4>
+    <p>
+      Một biến được khai báo bên trong hàm, chỉ sử dụng được bên trong thân hàm
+      đó. Biến này gọi là biến cục bộ (hay biến địa phương).
+      <br />
+      Ví dụ về biến cục bộ trong JavaScript:
+    </p>
+    <img src="./img/biencucbo.png" alt="" />
+    <h4>Biến toàn cục</h4>
+    <p>
+      Một biến được khai báo ở ngoài tất cả các hàm, gọi là biến toàn cục. Biến
+      toàn cục có thể được sử dụng và thay đổi giá trị ở mọi nơi trong chương
+      trình. Vì vậy, bạn nên hạn chế sử dụng biến toàn cục. Điều này giúp hàm
+      trở nên tốt hơn, dễ dàng tái sử dụng hơn (vì nó độc lập với các biến bên
+      ngoài).
+    </p>
+    <h4>Truyền tham số vào hàm</h4>
+    <p>
+      Trong trường hợp bạn muốn sử dụng giá trị của biến bên ngoài vào trong
+      thân hàm, bạn có thể truyền tham số vào hàm (thay vì sử dụng biến toàn
+      cục).
+    </p>
+    <img src="./img/truyenthamso.png" alt="" />
+    <h4>Phạm vi của một function</h4>
+    <p>
+      Các biến được khai báo trong một function thì sẽ có function scope, do đó
+      ta không thể truy cập đến các biến này được. Một function có thể truy cập
+      tới bất kỳ các biến hoặc thậm chí các hàm trong cùng phạm vi mà nó được
+      định nghĩa. Giải thích một cách đơn giản là một function được khai báo ở
+      global scope thì có thể truy cập đến các biến được khai báo ở global scope
+      Một function được định nghĩa bên trong một function khác thì có thể truy
+      cập đến các biến được khai báo bên trong function cha chứa nó, đồng thời
+      nó cũng có thể truy cập đến tất cả các biến mà function cha chứa nó có thể
+      truy cập đến.
+    </p>
+    <h4>Phân biệt tham số (parameter) và đối số (argument )</h4>
+    <ul>
+      <li>
+        Tham số hay parameter là các tên mà được liệt kê trong dấu ngoặc () lúc
+        ta định nghĩa một function.
+      </li>
+      <li>
+        Đối số hay argument là các giá trị thực mà ta truyền vào function lúc ta
+        gọi function nó.
+      </li>
+    </ul>
+    <img src="./img/thamso.png" alt="" />
+    <h4>IIFE (Immediately invoked function expression)</h4>
+    <p>Cú pháp của nó như sau:</p>
+    <img src="./img/iife.png" alt="" />
+    <p>Ví dụ</p>
+    <img src="./img/ii.png" alt="" />
+    <h4>Arrow function</h4>
+    <p>
+      Đây là một cách viết function mới, được ra mắt trong ES6 giúp tiết kiệm
+      thời gian code cũng như đơn giản hóa phạm vi của function.
+      <br />
+      Cú pháp như sau:
+    </p>
+    <img src="./img/arrow.png" alt="" />
+    <p>Ví dụ</p>
+    <img src="./img/arrow2.png" alt="" />
+  </body>
+</html>
