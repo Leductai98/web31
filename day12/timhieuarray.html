@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu Array</title>
+    <script src="./js/learnarray.js"></script>
+  </head>
+  <body>
+    <h2>1. Array là gì</h2>
+    <p>
+      Mảng là 1 kiểu dữ liệu thuộc kiểu tham chiếu (reference type) dùng để lưu
+      trữ nhiều values (giá trị) trong 1 biến duy nhất.
+    </p>
+    <p>
+      Array trong JavaScript cũng là một loại object. Nhưng array khác object
+      bình thường ở chỗ là:
+    </p>
+    <ul>
+      <li>Array (mảng) được thiết kế để lưu trữ dữ liệu theo thứ tự.</li>
+      <li>
+        Object (đối tượng) bình thường chỉ là tập hợp của các cặp key-value.
+      </li>
+    </ul>
+    <h4>Thuộc tính length</h4>
+    <p>
+      length --- Là thuộc tính đưa ra độ dài của mảng. Nếu bạn dùng một số
+      nguyên âm, số thực hoặc một chuỗi làm chỉ mục thì độ dài của mảng cũng là
+      một số nguyên dương cao nhất.
+    </p>
+    <p>
+      Thuộc tính length được tự động cập nhật mỗi khi bạn thêm/xóa phần tử trong
+      mảng.
+    </p>
+    <p>
+      Giá trị của length bằng chỉ số lớn nhất trong mảng cộng thêm 1 đơn vị, ví
+      dụ:
+    </p>
+    <p>
+      Thuộc tính length là writable. Nghĩa là bạn có thể thay đổi giá trị của
+      thuộc tính length. Nếu bạn tăng nó lên thì không sao. Nhưng ngược lại, nếu
+      bạn giảm giá trị của length thì mảng sẽ bị cắt ngắn đi: let letters =
+      ["a", "b", "c"];
+    </p>
+    <h2>2. Cú pháp khai báo</h2>
+    <ul>
+      <li>
+        Sử dụng dấu ngoặc vuông []. <br />
+        <img src="./img/taoarray.png" alt="" />
+      </li>
+      <li>
+        Sử dụng hàm khởi tạo new Array(). <br />
+        <img src="./img/newarray.png" alt="" />
+      </li>
+    </ul>
+    <h2>3. Cú pháp cơ bản</h2>
+    <h4>Thêm giá trị</h4>
+    <p>Sử dụng push để thêm một phần tử vào cuối mảng</p>
+    <img src="./img/push.png" alt="" /> <br />
+    <img src="./img/push2.png" alt="" />
+    <p>Sử dụng unshift để thêm phần tử vào đầu mảng</p>
+    <img src="./img/unshift.png" alt="" /> <br />
+    <img src="./img/unshift2.png" alt="" />
+    <h4>Xóa giá trị</h4>
+    <p>Sủ dụng pop để xóa một phần tử ở cuối mảng</p>
+    <img src="./img/pop.png" alt="" />
+    <br />
+    <img src="./img/pop2.png" alt="" />
+    <p>Sử dụng shift để xóa phần tử đầu mảng</p>
+    <img src="./img/shift.png" alt="" /> <br />
+    <img src="./img/shift2.png" alt="" />
+    <p>
+      Ngoài ra còn có thể dùng delete để xóa phần tử, nhưng hàm delete để lại
+      một lỗ trống trong mảng
+    </p>
+    <img src="./img/delete.png" alt="" /> <br />
+
+    <img src="./img/delete3.png" alt="" /> <br />
+    <img src="./img/delete4.png" alt="" />
+    <h4>Sửa giá trị</h4>
+    <img src="./img/change.png" alt="" />
+    <br />
+    <img src="./img/change2.png" alt="" />
+    <h4>Splice</h4>
+    <p>
+      Hàm splice vừa có thể thêm vừa có thể sửa và xóa được các phần tử trong
+      mảng
+    </p>
+    <img src="./img/splice+.png" alt="" /> <br />
+    <ul>
+      <li>Số đầu tiên dùng để chỉ vị trí phần tử được thêm vào</li>
+      <li>Số thứ 2 dùng để xác định có bao nhiêu phần tử bị xóa đi</li>
+      <li>Các giá trị tiếp theo là các phần tử được thêm vào</li>
+    </ul>
+    <img src="./img/splice+2.png" alt="" />
+    <br />
+    <img src="./img/splice-.png" alt="" /> <br />
+    <img src="./img/splice-2.png" alt="" />
+    <br />
+    <img src="./img/remove.png" alt="" /> <br />
+    <img src="./img/remove2.png" alt="" />
+    <h2>4. Duyệt qua các giá trị trong mảng</h2>
+    <p>Sử dụng hàm keys() để trả về các keys của mảng.</p>
+    <img src="./img/key.png" alt="" /> <br />
+    <img src="./img/key2.png" alt="" />
+    <p>Sử dụng hàm entries() để trả về cả keys và value của mảng</p>
+    <img src="./img/value.png" alt="" /> <br />
+    <img src="./img/value2.png" alt="" />
+    <p>Sử dụng forEach() để duyệt qua từng phần tử của mảng</p>
+    <img src="./img/foreach.png" alt="" /> <br />
+    <img src="./img/foreach2.png" alt="" />
+    <h2>5. Các phương thức cơ bản làm việc với mảng</h2>
+    <h4>concat()</h4>
+    <p>concat() dùng để nối 2 hay nhiều mảng với nhau</p>
+    <ul>
+      <li>concat() KHÔNG làm thay đổi mảng ban đầu</li>
+      <li>concat() trả về 1 mảng mới sau khi nối</li>
+    </ul>
+    <img src="./img/concat.png" alt="" />
+    <h4>filter()</h4>
+    <p>
+      filter() dùng để lọc ra các phần tử trong mảng thoả mãn một điều kiện nào
+      đó
+    </p>
+    <ul>
+      <li>filter() KHÔNG làm thay đổi mảng ban đầu</li>
+      <li>filter() trả về 1 mảng mới sau khi lọc</li>
+      <li>
+        filter() trả về một mảng RỖNG nếu không có phần tử nào thỏa mãn điều
+        kiện
+      </li>
+    </ul>
+    <img src="./img/filter.png" alt="" /> <br />
+    <img src="./img/filter2.png" alt="" />
+    <h4>find()</h4>
+    <p>
+      find() cũng dùng để lọc phần tử trong mảng, tuy nhiên nó sẽ trả về giá trị
+      ĐẦU TIÊN tìm thấy ở trong mảng hoặc có thể trả về undefined nếu không tìm
+      thấy
+    </p>
+    <ul>
+      <li>find() KHÔNG làm thay đổi mảng ban đầu</li>
+    </ul>
+    <img src="./img/find.png" alt="" /> <br />
+    <img src="./img/find2.png" alt="" />
+    <h4>includes()</h4>
+    <p>
+      includes() kiểm tra xem phần tử đã cho có tồn tại trong mảng hay không
+    </p>
+
+    <ul>
+      <li>includes() KHÔNG làm thay đổi mảng ban đầu</li>
+      <li>
+        includes() trả về kiểu Boolean: true nếu tìm thấy hoặc false nếu không
+        tìm thấy
+      </li>
+    </ul>
+    <img src="./img/include.png" alt="" /> <br />
+    <img src="./img/include2.png" alt="" />
+    <h4>indexOf()</h4>
+    <p>indexOf() dùng để tìm kiếm vị trí của phần tử trong mảng</p>
+    <ul>
+      <li>indexOf() KHÔNG làm thay đổi mảng ban đầu</li>
+      <li>
+        indexOf() trả về giá trị index ĐẦU TIÊN của mảng nếu phần tử tồn tại
+        trong mảng
+      </li>
+      <li>indexOf() trả về -1 nếu phần tử không tồn tại trong mảng</li>
+    </ul>
+    <img src="./img/index.png" alt="" /> <br />
+    <img src="./img/index2.png" alt="" />
+    <h4>join()</h4>
+    <p>
+      join() dùng để tạo ra một chuỗi mới bằng cách nối tất cả các phần tử của
+      mảng, mặc định ngăn cách chúng bởi dấu phẩy hoặc một chuỗi ký tự xác định.
+    </p>
+    <ul>
+      <li>join() KHÔNG làm thay đổi mảng ban đầu</li>
+      <li>join() trả về chính phần tử nếu mảng chỉ có một phần tử</li>
+      <li>join() trả về một chuỗi rỗng "" nếu arr.length === 0</li>
+    </ul>
+    <img src="./img/join.png" alt="" />
+    <br />
+    <img src="./img/join2.png" alt="" />
+    <h4>map()</h4>
+    <p>
+      map() giúp tạo ra một mảng mới với các phần tử là kết quả từ việc thực thi
+      một hàm lên TỪNG PHẦN TỬ của mảng ban đầu
+    </p>
+    <ul>
+      <li>map() KHÔNG làm thay đổi mảng ban đầu</li>
+    </ul>
+    <img src="./img/map.png" alt="" /> <br />
+    <img src="./img/map2.png" alt="" />
+
+    <h2>Callback</h2>
+    <p>Là hàm(function) được truyền qua đối số khi gọi một hàm khác</p>
+    <img src="./img/calback.png" alt="" /> <br />
+    <img src="./img/callback2.png" alt="" />
+  </body>
+</html>
