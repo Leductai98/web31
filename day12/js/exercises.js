@@ -1,11 +1,11 @@
 // Danh sách sinh viên và quốc gia tương ứng
 // Tên sinh viên là key còn quốc gia là value
 const guessList = {
-    Randy: "Germany",
-    Karla: "France",
-    Wendy: "Japan",
-    Norman: "England",
-    Sam: "Argentina",
+  Randy: "Germany",
+  Karla: "France",
+  Wendy: "Japan",
+  Norman: "England",
+  Sam: "Argentina",
 };
 
 /**
@@ -19,20 +19,21 @@ const guessList = {
  * @return {string} Câu chào
  */
 function greeting(name) {
-    if (name in guessList) {
-        return "Hi, I'm " + name + ", and I'm from " + guessList[name] + "!";
-    } else {
-        return "Hi! I'm guess.";
-    }
+  if (name in guessList) {
+    return "Hi, I'm " + name + ", and I'm from " + guessList[name] + "!";
+  } else {
+    return "Hi! I'm guess.";
+  }
 }
+console.log(greeting("Wendy"));
 
 // Danh sách thành viên trong 1 gia đình
 // Tên là key, tuổi là value
 const myFamily = {
-    Fred: 34,
-    Susan: 32,
-    Emily: 8,
-    Tom: 5,
+  Fred: 34,
+  Susan: 32,
+  Emily: 8,
+  Tom: 5,
 };
 
 /**
@@ -45,7 +46,14 @@ const myFamily = {
  *
  * @return {{[key: string]: number}} Danh sách thành viên và số tuổi tương ứng sau `n` năm
  */
-function afterNYears(obj, n) {}
+function afterNYears(obj, n) {
+  for (let key in obj) {
+    value = obj[key] + n;
+    obj[key] = value;
+  }
+  return obj;
+}
+console.log(afterNYears(myFamily, 5));
 
 /**
  * Đảo ngược key thành value, value thành key của một object bất kỳ
@@ -56,13 +64,25 @@ function afterNYears(obj, n) {}
  *
  * @return {[key: string]: string} Object mới sau khi đảo ngược
  */
-function invert(obj) {}
+function invert(obj) {
+  let newObject = {};
+  let key;
+  for (let key in obj) {
+    value = obj[key];
+    temp = value;
+    value = key;
+    key = temp;
+    newObject[value] = key;
+  }
+  return key;
+}
+console.log(invert(myFamily));
 
 // Danh sách items
 // Key là tên, value là giá trị tương ứng
 const items = {
-    tv: 300,
-    ipad: 1000,
+  tv: 300,
+  ipad: 1000,
 };
 
 /**
@@ -72,8 +92,11 @@ const items = {
  *
  * @return {number} Tổng giá trị các items
  */
-function totalAmount(items) {}
-
+function totalAmount(items) {
+  let sum = items.tv + items.ipad;
+  return sum;
+}
+console.log(totalAmount(items));
 /**
  * Lọc và trả về danh sách các items có giá trị cao (value >= 1000) trong danh sách đầu vào
  *
@@ -83,4 +106,13 @@ function totalAmount(items) {}
  *
  * @return {{[key: string]: number}} Danh sách các items có giá trị cao
  */
-function expensiveItems(items) {}
+function expensiveItems(items) {
+  let result = {};
+  for (let key in items) {
+    if (items[key] >= 1000) {
+      result.[key] = items[key];
+    }
+    return result;
+  }
+}
+console.log(expensiveItems(items));

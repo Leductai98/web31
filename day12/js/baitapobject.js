@@ -70,9 +70,7 @@ function Cat(name, weight, color, age, breed) {
   this.age;
   this.breed;
 
-  toString(){
-    return 
-  }
+  
 }
 
 const cat1 = new Cat("Liasa", "3", "orange", "3", "Bristish");
