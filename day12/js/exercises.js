@@ -110,7 +110,7 @@ function expensiveItems(items) {
   let result = {};
   for (let key in items) {
     if (items[key] >= 1000) {
-      result.[key] = items[key];
+      result = items[key];
     }
     return result;
   }

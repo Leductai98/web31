@@ -1,36 +1,23 @@
 function Weapon(type, dame, speed) {
-  this.type;
-  this.dame;
-  this.speed;
+  this.type = type;
+  this.dame = dame;
+  this.speed = speed;
 }
 
 function Character(name, level, weapon) {
-  this.name;
-  this.level;
-  this.weapon;
+  this.name = name;
+  this.level = level;
+  this.weapon = weapon;
+  this.attack = function () {
+    console.log("Tấn công");
+  };
+  this.changeWeapon = function () {
+    console.log("Đổi vũ khí");
+  };
 }
 
-let counter = {
-  value: 0,
-  up() {
-    this.value++;
-    return this;
-  },
-  down() {
-    this.value--;
-    return this;
-  },
-  get() {
-    this.value;
-    return this;
-  },
-  reset() {
-    this.value = 0;
-    return this;
-  },
-};
+const w1 = new Weapon(1, 30, 50);
+const c1 = new Character("A", 3, w1);
 
-console.log(counter.get().down().get().reset());
-
-
-function Newcounter(up,down,get,reset)
+console.log(w1);
+console.log(c1.attack());

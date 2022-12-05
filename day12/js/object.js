@@ -15,7 +15,7 @@ let phong = {
     name: "Hoàng Minh Thắng",
     age: 45,
   },
-  eat(food) {
+  eat() {
     console.log("Ăn", food);
   },
 };

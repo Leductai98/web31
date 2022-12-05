@@ -64,16 +64,14 @@ console.log(a);
 
 //Contructor
 function Cat(name, weight, color, age, breed) {
-  this.name;
-  this.weight;
-  this.color;
-  this.age;
-  this.breed;
-
-  
+  this.name = name;
+  this.weight = weight;
+  this.color = color;
+  this.age = age;
+  this.breed = breed;
 }
 
 const cat1 = new Cat("Liasa", "3", "orange", "3", "Bristish");
 const cat2 = new Cat("Emily", "2", "black", "2", "Mướp");
 
-console.log(cat1);
+console.log(cat2);
