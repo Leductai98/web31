@@ -191,8 +191,8 @@ trị trong mảng và value là số lần xuất hiện trong mảng
 /* Cách làm
  * Bước 1: Sử dung vòng lặp for, hàm toString và toLowerCase để chuyển mảng thành mảng ký tự và không viết hoa
  * Bước 2: Khai báo đối tượng obj để giữ giá trị trả về
- * Bước 3: Khai báo biến arr1=arr để cắt các phần tử bị trùng
- * Bước 4: Sử dụng vòng lặp for để cắt các phần tử bị trùng
+ * Bước 3: Khai báo biến arr1 để giữ các phần tử trong mang arr sau khi xóa các phần tử bị trùng
+ * Bước 4: Sử dụng hàm filter , trong đó sử dụng if và hàm includes để tạo ra mảng mới mà các phần tử chỉ xuất hiện 1 lần
  * Bước 5: Sử dụng vòng lặp for để đếm số lần lặp lại của phần tử và đưa các giá trị và số lần xuất hiện vào đối tương obj
  * Bước 6: Trả về đối tượng obj
  */
@@ -201,16 +201,12 @@ function countElement(arr) {
   for (let i = 0; i < arr.length; i++) {
     arr[i] = arr[i].toString().toLowerCase();
   }
-  console.log(arr);
   var obj = {};
-  let arr1 = arr;
-  for (i = 0; i < arr1.length; i++) {
-    for (j = i + 1; j < arr1.length; j++) {
-      if (arr1[i] === arr1[j]) {
-        arr1.splice(j, 1);
-      }
-    }
-  }
+  let arr1 = [];
+  arr1 = arr.filter(function (item) {
+    if (arr1.includes(item)) return "";
+    else return arr1.push(item);
+  });
   console.log(arr1);
   for (let i = 0; i < arr1.length; i++) {
     let count = 0;
@@ -221,4 +217,4 @@ function countElement(arr) {
   }
   return obj;
 }
-console.log(countElement(["Ba", "Béo", "Ba"]));
+console.log(countElement([5, 5, 5, 5, 1, 2, 1, 5]));
