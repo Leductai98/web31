@@ -193,7 +193,7 @@ trị trong mảng và value là số lần xuất hiện trong mảng
  * Bước 2: Khai báo đối tượng obj để giữ giá trị trả về
  * Bước 3: Khai báo biến arr1=arr để cắt các phần tử bị trùng
  * Bước 4: Sử dụng vòng lặp for để cắt các phần tử bị trùng
- * Bước 5: Sử dụng vòng lặp for để đưa các giá trị và số lần xuất hiện vào đối tương obj
+ * Bước 5: Sử dụng vòng lặp for để đếm số lần lặp lại của phần tử và đưa các giá trị và số lần xuất hiện vào đối tương obj
  * Bước 6: Trả về đối tượng obj
  */
 
