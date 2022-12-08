@@ -8,7 +8,7 @@
 let x = [2, 3, 56, 74, 80, 224, 300, 668, 80, 3];
 let y = [3, 5, 6, 7, 8, 80, 56, 12, 13];
 function min(arr) {
-  let result = arr[1];
+  let result = arr[0];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] < result) {
       result = arr[i];
@@ -84,10 +84,13 @@ console.log("\n");
 function intersection(arr1, arr2) {
   let result = [];
   for (i = 0; i < arr1.length; i++) {
-    for (j = 0; j < arr2.length; j++) {
+    /*for (j = 0; j < arr2.length; j++) {
       if (arr1[i] === arr2[j]) {
         result.push(arr1[i]);
       }
+    }*/
+    if (arr2.includes(arrr1[i])) {
+      result.push(arr1[i]);
     }
   }
   for (i = 0; i < result.length; i++) {
@@ -111,22 +114,14 @@ console.log("\n");
  */
 function difference(arr1, arr2) {
   let result = [];
-  let result1 = intersection(arr1, arr2);
   for (i = 0; i < arr1.length; i++) {
-    for (j = 0; j < result1.length; j++) {
-      if (arr1[i] !== result1[j]) result.push(arr1[i]);
+    if (arr2.includes(arr1[i]) == 0) {
+      result.push(arr1[i]);
     }
   }
   for (i = 0; i < arr2.length; i++) {
-    for (j = 0; j < result1.length; j++) {
-      if (arr2[i] !== result1[j]) result.push(arr2[i]);
-    }
-  }
-  for (i = 0; i < result.length; i++) {
-    for (j = i + 1; j < result.length; j++) {
-      if (result[i] === result[j]) {
-        result.splice(j, 1);
-      }
+    if (arr1.includes(arr2[i]) == 0) {
+      result.push(arr2[i]);
     }
   }
   return result;
@@ -163,7 +158,7 @@ console.log("\n");
 function secondLargest(arr) {
   let max1 = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
+    if (arr[i] > max1) {
       max1 = arr[i];
     }
   }
@@ -184,7 +179,16 @@ console.log("\n");
  *
  * @return {arr} Mảng bị xáo trộn
  */
-function shuffle(arr) {}
+console.log(x);
+function shuffle(arr) {
+  for (i = 0; i < arr.length / 2; i++) {
+    let temp = arr[i];
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i] = temp;
+  }
+  return arr;
+}
+console.log(shuffle(x));
 
 /**
  * @typedef {object} student
@@ -205,4 +209,6 @@ function shuffle(arr) {}
  *
  * @return {student[]}
  */
-function fullname(students) {}
+function fullname(students) {
+  let result = students.keys();
+}

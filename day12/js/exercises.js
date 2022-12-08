@@ -35,7 +35,6 @@ const myFamily = {
   Emily: 8,
   Tom: 5,
 };
-
 /**
  * Tính xem sau `n` năm nữa thì các thành viên trong gia đình bao nhiêu tuổi
  *
@@ -66,15 +65,15 @@ console.log(afterNYears(myFamily, 5));
  */
 function invert(obj) {
   let newObject = {};
-  let key;
   for (let key in obj) {
-    value = obj[key];
-    temp = value;
-    value = key;
-    key = temp;
-    newObject[value] = key;
+    let value = obj[key];
+    let temp = key;
+    key = value;
+    value = temp;
+    newObject[key] = value;
+    console.log(value);
   }
-  return key;
+  return newObject;
 }
 console.log(invert(myFamily));
 
@@ -107,12 +106,6 @@ console.log(totalAmount(items));
  * @return {{[key: string]: number}} Danh sách các items có giá trị cao
  */
 function expensiveItems(items) {
-  let result = {};
-  for (let key in items) {
-    if (items[key] >= 1000) {
-      result = items[key];
-    }
-    return result;
-  }
+  let result = [];
 }
 console.log(expensiveItems(items));
