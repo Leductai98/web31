@@ -207,13 +207,14 @@ function countElement(arr) {
     if (arr1.includes(item)) return "";
     else return arr1.push(item);
   });
+  console.log(arr1);
   for (let i = 0; i < arr1.length; i++) {
-    let count = 0;
+    let arr2 = [];
     for (let j = 0; j < arr.length; j++) {
-      if (arr1[i] == arr[j]) count++;
+      if (arr1[i] == arr[j]) arr2.push(arr[j]);
     }
-    obj[arr1[i]] = count;
+    obj[arr1[i]] = arr2.length;
   }
   return obj;
 }
-console.log(countElement([5, 5, 5, 5, 1, 2, 1, 5]));
+console.log(countElement([1, true, 1, 1, true]));
