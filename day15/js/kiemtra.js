@@ -83,7 +83,7 @@ dấu cách)
  * Bước 6: Trả về kêt quả true hoặc false
  */
 function isPalindrome(str) {
-  let str1 = str.toLocaleLowerCase();
+  let str1 = str.toLowerCase();
   let result = str1.split("");
   for (let i = 0; i < result.length; i++) {
     if (result[i] === " ") {
@@ -187,12 +187,21 @@ trị trong mảng và value là số lần xuất hiện trong mảng
 * let result = countElement(['Ba', 'Béo', 'Ba']);
 * console.log(result); // {ba: 2, béo: 1}
 */
-let obj2 = {};
-obj2.name = 1;
+
+/* Cách làm
+ * Bước 1: Sử dung vòng lặp for, hàm toString và toLowerCase để chuyển mảng thành mảng ký tự và không viết hoa
+ * Bước 2: Khai báo đối tượng obj để giữ giá trị trả về
+ * Bước 3: Khai báo biến arr1=arr để cắt các phần tử bị trùng
+ * Bước 4: Sử dụng vòng lặp for để cắt các phần tử bị trùng
+ * Bước 5: Sử dụng vòng lặp for để đưa các giá trị và số lần xuất hiện vào đối tương obj
+ * Bước 6: Trả về đối tượng obj
+ */
+
 function countElement(arr) {
   for (let i = 0; i < arr.length; i++) {
-    arr[i] = arr[i].toString().toLocaleLowerCase();
+    arr[i] = arr[i].toString().toLowerCase();
   }
+  console.log(arr);
   var obj = {};
   let arr1 = arr;
   for (i = 0; i < arr1.length; i++) {
@@ -202,13 +211,14 @@ function countElement(arr) {
       }
     }
   }
+  console.log(arr1);
   for (let i = 0; i < arr1.length; i++) {
     let count = 0;
     for (let j = 0; j < arr.length; j++) {
       if (arr1[i] == arr[j]) count++;
     }
+    obj[arr1[i]] = count;
   }
-  obj.prototype.name = 2;
-  console.log(obj);
+  return obj;
 }
-console.log(obj2);
+console.log(countElement(["Ba", "Béo", "Ba"]));
