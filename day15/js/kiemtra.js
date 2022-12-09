@@ -77,22 +77,28 @@ dấu cách)
 /* Cách làm
  * Bước 1: Khai báo biến srt1 để chuyển cả chuỗi về chữ cái viết thường
  * Bước 2: Sử dụng hàm split để biến chuỗi thành mảng và gán vào biến result
- * Bước 3: Sử dụng hàm for và if để xóa khoảng trắng trong mảng result
- * Bước 4: Sử dụng hàm reverse() để đảo ngước mảng result và gán vào biến reverseResult
- * Bước 5: So sánh 2 mảng result và reverseResult
- * Bước 6: Trả về kêt quả true hoặc false
+ * Bước 3: Sử dụng hàm filter để xóa khoảng trắng trong chuỗi và gán vào biến result1
+ * Bước 4: Sử dụng hàm join để để biến mảng result1 thành chuỗi và gán vào biến result2
+ * Bước 5: Sử dụng hàm reverse() để đảo ngước mảng result1 và gán vào biến reverseResult
+ * Bước 6: Sử dụng hàm join để biến mảng reverseResult thành chuỗi và gán vào biến reverseResult1
+ * Bước 7: So sánh 2 chuỗi result2 và reverseResult
+ * Bước 8: Trả về kêt quả true hoặc false
  */
 function isPalindrome(str) {
   let str1 = str.toLowerCase();
   let result = str1.split("");
-  for (let i = 0; i < result.length; i++) {
-    if (result[i] === " ") {
-      result.splice(i, 1);
-    }
-  }
-  let reverseResult = result.reverse();
+  let result1 = result.filter(function (a) {
+    if (a === " ") return "";
+    else return a;
+  });
 
-  if (result === reverseResult) return true;
+  let result2 = result1.join("");
+  console.log(result2);
+  let reverseResult = result1.reverse();
+  let reverseResult1 = reverseResult.join("");
+  console.log(reverseResult1);
+
+  if (result2 === reverseResult1) return true;
   else return false;
 }
 console.log(isPalindrome("Race car"));
@@ -205,7 +211,7 @@ function countElement(arr) {
   let arr1 = [];
   arr1 = arr.filter(function (item) {
     if (arr1.includes(item)) return "";
-    else return arr1.push(item);
+    else return item;
   });
   console.log(arr1);
   for (let i = 0; i < arr1.length; i++) {
