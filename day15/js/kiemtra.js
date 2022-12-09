@@ -246,3 +246,114 @@ function countElement(arr) {
   return obj;
 }
 console.log(countElement([1, true, 1, 1, true]));
+
+/**
+ * Object chứa thông tin về sinh viên
+ *
+ * @typedef {Object} Student
+ * @property {number} id - ID duy nhất của sinh viên
+ * @property {string} name - Tên sinh viên
+ * @property {string} dateOfBirth - Ngày sinh
+ * @property {number} grade - Điểm tốt nghiệp
+ */
+/**
+* Sắp xếp danh sách sinh viên dựa theo:
+* - Điểm tốt nghiệp theo thứ tự giảm dần
+* - Nếu sinh viên có điểm tốt nghiệp bằng nhau thì sắp xếp theo thứ tự
+ngày sinh tăng dần
+* - Nếu ngày sinh cũng giống nhau thì sắp xếp theo tên (bảng chữ cái)
+*
+* Kết quả trả về phải là một mảng mới, không thay đổi mảng cũ
+*
+* @param {Student[]} students - Mảng chứa thông tin sinh viên
+*
+* @return {Student[]} Danh sách sinh viên sau khi sắp xếp
+*
+* @example
+* let students = [
+* { id: 1, name: "Ba Nguyễn", dateOfBirth: '1992-05-24', point: 10.0
+},
+* { id: 2, name: "Tuấn Anh", dateOfBirth: '1993-10-29', point: 4.5 },
+* { id: 3, name: "Tuấn Vũ", dateOfBirth: '1996-03-13', point: 8.2 },
+* { id: 4, name: "Minh Vân", dateOfBirth: '1996-03-31', point: 7.0 },
+* { id: 5, name: "Phương Thảo", dateOfBirth: '1999-05-15', point: 9.0
+},
+* { id: 6, name: "Mai Anh", dateOfBirth: '1994-08-22', point: 4.5 },
+* { id: 7, name: "Thanh Hà", dateOfBirth: '1996-03-31', point: 7.0 },* { id: 8, name: "Hoàng Linh", dateOfBirth: '1991-07-01', point: 7.2
+},
+* { id: 9, name: "Lan Nhi", dateOfBirth: '1990-09-10', point: 5.5 },
+* ]
+*
+* sortStudents(students);
+*
+* // Kết quả
+* [
+* // sắp xếp theo điểm
+* { id: 1, name: "Ba Nguyễn", dateOfBirth: '1992-05-24', point: 10.0
+},
+* { id: 5, name: "Phương Thảo", dateOfBirth: '1999-05-15', point: 9.0
+},
+* { id: 3, name: "Tuấn Vũ", dateOfBirth: '1996-03-13', point: 8.2 },
+* { id: 8, name: "Hoàng Linh", dateOfBirth: '1991-07-01', point: 7.2
+},
+* // điểm bằng nhau, sắp xếp theo ngày sinh
+* { id: 7, name: "Thanh Hà", dateOfBirth: '1996-02-16', point: 7.0 },
+* { id: 4, name: "Minh Vân", dateOfBirth: '1993-03-31', point: 7.0 },
+* // sắp xếp theo điểm
+* { id: 9, name: "Lan Nhi", dateOfBirth: '1990-09-10', point: 5.5 },
+* // điểm bằng nhau, ngày sinh giống nhau, sắp xếp theo tên
+* { id: 6, name: "Mai Anh", dateOfBirth: '1996-03-31', point: 4.5 },
+* { id: 2, name: "Tuấn Anh", dateOfBirth: '1996-03-31', point: 4.5 },
+* ]
+*/
+
+let students = [
+  { id: 1, name: "Ba Nguyễn", dateOfBirth: "1992-05-24", point: 10.0 },
+  { id: 2, name: "Tuấn Anh", dateOfBirth: "1993-10-29", point: 4.5 },
+  { id: 3, name: "Tuấn Vũ", dateOfBirth: "1996-03-13", point: 8.2 },
+  { id: 4, name: "Minh Vân", dateOfBirth: "1996-03-31", point: 7.0 },
+  { id: 5, name: "Phương Thảo", dateOfBirth: "1999-05-15", point: 9.0 },
+  { id: 6, name: "Mai Anh", dateOfBirth: "1993-10-29", point: 4.5 },
+  { id: 7, name: "Thanh Hà", dateOfBirth: "1996-02-16", point: 7.0 },
+  { id: 8, name: "Hoàng Linh", dateOfBirth: "1991-07-01", point: 7.2 },
+  { id: 9, name: "Lan Nhi", dateOfBirth: "1990-09-10", point: 5.5 },
+];
+
+/* Cách làm
+ * Bước 1: Sử dung biến arr = để sao chép lại mảng students
+ * Bước 2: Sử dụng vòng lặp for để tìm được vị trí có giá trị lớn nhất
+ * Bước 3: Sau khi tìm được vị trí lớn nhất, đổi chỗ giá trị của vị trí i trong mảng arr với giá trị của vị trí lớn nhất
+ * Bước 4: Trả về mảng arr
+ */
+
+function sortStudents(students) {
+  let arr = students;
+  for (let i = 0; i < arr.length; i++) {
+    let viTriLonNhat = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j].point == arr[viTriLonNhat].point) {
+        if (
+          new Date(arr[j].dateOfBirth).getDate() >
+          new Date(arr[viTriLonNhat].dateOfBirth).getDate()
+        ) {
+          viTriLonNhat = j;
+        } else if (
+          new Date(arr[j].dateOfBirth).getDate() ==
+          new Date(arr[viTriLonNhat].dateOfBirth).getDate()
+        ) {
+          if (arr[j].name.localeCompare(arr[viTriLonNhat].name) == -1) {
+            viTriLonNhat = j;
+          }
+        }
+      } else if (arr[j].point > arr[viTriLonNhat].point) {
+        viTriLonNhat = j;
+      }
+    }
+    let temp = arr[i];
+    arr[i] = arr[viTriLonNhat];
+    arr[viTriLonNhat] = temp;
+  }
+  return arr;
+}
+
+console.log(sortStudents(students));
