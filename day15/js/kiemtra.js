@@ -59,8 +59,30 @@ biểu thị thời gian tương ứng sau n giây*
 * calcTime('20:15:45', 15); // '20:16:00'
 * calcTime('20:15:45', -46); // '20:14:59'
 */
-function calcTime(time, n) {}
 
+/* Cách làm
+ * Bước 1: Khai báo biến result để giữ kết quả tính toán
+ * Bước 2: Sử dụng hàm if để đặt điều kiện tính giá điện
+ * Bước 3: Đặt công thức tính giá điện trong các hàm if
+ * Bước 4: Trả về biến cost
+ */
+function calcTime(time, n) {
+  let result =
+    Number(time[0]) * 10 * 3600 +
+    Number(time[1]) * 3600 +
+    Number(time[3]) * 10 * 60 +
+    Number(time[4]) * 60 +
+    Number(time[6]) * 10 +
+    Number(time[7]) +
+    n;
+  let hours = Math.floor(result / 3600);
+  console.log(hours);
+  let mininutes = Math.floor((result % 3600) / 60);
+  let seconds = result - hours * 3600 - mininutes * 60;
+  if (seconds < 10) seconds = "0" + seconds;
+  return `${hours}:${mininutes}:${seconds}`;
+}
+console.log(calcTime("20:15:45", 18));
 /**
 * Kiểm tra một chuỗi có phải đối xứng hay không (viết xuôi hay viết
 ngược đều giống nhau, không phân biệt chữ hoa chữ thường và không tính
