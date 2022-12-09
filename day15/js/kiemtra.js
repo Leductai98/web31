@@ -322,6 +322,11 @@ let students = [
 /* Cách làm
  * Bước 1: Sử dung biến arr = để sao chép lại mảng students
  * Bước 2: Sử dụng vòng lặp for để tìm được vị trí có giá trị lớn nhất
+ *  Gán vị trí có giá trị lớn nhất vào vị trí đầu tiên i=0
+ *  Sau đó ở dụng vòng lặp for với biến j để lặp qua mảng arr bắt đầu từ vị trí i+1
+ *    Nếu point vị trí i = vị trí j thì sẽ xét đến ngày sinh, nếu ngày sinh của vị trí j > vị trí i thì viTriLonNhat = j
+ *    Nếu ngày sinh vẫn = nhau thì xét đến tên, tên ở vị trí j > i thì viTriLonNhat=j
+ *    Nếu point vị trí j > vị trí i thì viTriLonNhat= j;
  * Bước 3: Sau khi tìm được vị trí lớn nhất, đổi chỗ giá trị của vị trí i trong mảng arr với giá trị của vị trí lớn nhất
  * Bước 4: Trả về mảng arr
  */
