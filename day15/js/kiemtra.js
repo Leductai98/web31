@@ -235,7 +235,6 @@ function countElement(arr) {
     if (arr1.includes(item)) return "";
     else return arr1.push(item);
   });
-  console.log(arr1);
   for (let i = 0; i < arr1.length; i++) {
     let arr2 = [];
     for (let j = 0; j < arr.length; j++) {
