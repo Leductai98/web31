@@ -233,7 +233,7 @@ function countElement(arr) {
   let arr1 = [];
   arr1 = arr.filter(function (item) {
     if (arr1.includes(item)) return "";
-    else return item;
+    else return arr1.push(item);
   });
   console.log(arr1);
   for (let i = 0; i < arr1.length; i++) {
