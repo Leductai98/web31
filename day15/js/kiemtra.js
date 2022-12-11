@@ -44,7 +44,6 @@ function bill(kwh) {
   } else return "Invalid";
   return cost;
 }
-console.log(bill(100));
 
 /**
 * Cho một chuỗi time biểu thị thời gian dạng giờ:phút:giây (VD:
@@ -58,6 +57,15 @@ biểu thị thời gian tương ứng sau n giây*
 * @example
 * calcTime('20:15:45', 15); // '20:16:00'
 * calcTime('20:15:45', -46); // '20:14:59'
+*/
+
+/*Chữa bài
+//Bước 1: Tách các giá trị giờ phút giây
+//Bước 2: Cộng số giây với n
+//Bước 3: Chia tổng số giây cho 60 lấy số phút
+//Bước 4: Kiểm tra:
+//- Nếu số phút ==0 thì tăng số giây, ghép chuỗi kết quả và trả về
+//- Nếu số phút>0, lặp lại quy trình tính số phút, ...giờ
 */
 
 /* Cách làm
@@ -79,10 +87,15 @@ function calcTime(time, n) {
   console.log(hours);
   let mininutes = Math.floor((result % 3600) / 60);
   let seconds = result - hours * 3600 - mininutes * 60;
-  if (seconds < 10) seconds = "0" + seconds;
-  return `${hours}:${mininutes}:${seconds}`;
+  if (hours > 23) {
+    hours = hours - 23;
+  }
+
+  return `${String(hours).padStart(2, 0)}:${String(mininutes).padStart(
+    2,
+    0
+  )}:${String(seconds).padStart(2, 0)}`;
 }
-console.log(calcTime("20:15:45", 18));
 /**
 * Kiểm tra một chuỗi có phải đối xứng hay không (viết xuôi hay viết
 ngược đều giống nhau, không phân biệt chữ hoa chữ thường và không tính
@@ -115,15 +128,11 @@ function isPalindrome(str) {
   });
 
   let result2 = result1.join("");
-  console.log(result2);
   let reverseResult = result1.reverse();
   let reverseResult1 = reverseResult.join("");
-  console.log(reverseResult1);
-
   if (result2 === reverseResult1) return true;
   else return false;
 }
-console.log(isPalindrome("Race car"));
 
 /**
 * Một con ốc sên leo từ đáy giếng lên miệng giếng, biết ban ngày leo
@@ -149,11 +158,16 @@ function snail(h, x, y) {
   let day;
   if (x < y && Y < 0 && h < 0) return "Invalid";
   else {
-    day = h / (x - y);
+    let i = 0;
+    while ((x - y) * i + x < h) {
+      i++;
+      if ((x - y) * i + x > h) {
+        i++;
+      }
+    }
+    return i;
   }
-  return day;
 }
-console.log(snail(10, 3, 1));
 
 /**
 * Sắp xếp các chữ số trong một số nguyên dương bất kỳ để tạo ra số nhỏ
@@ -196,7 +210,6 @@ function sortNumber(n) {
     return Number(arr2.join(""));
   }
 }
-console.log(sortNumber(5307510));
 
 /**
 * Đếm số lần xuất hiện của mỗi phần tử trong mảng, nếu là chuỗi thì
@@ -232,9 +245,10 @@ function countElement(arr) {
   var obj = {};
   let arr1 = [];
   arr1 = arr.filter(function (item) {
-    if (arr1.includes(item)) return "";
-    else return arr1.push(item);
+    if (arr1.includes(item)) return false;
+    else return true;
   });
+console.log(arr1);
   for (let i = 0; i < arr1.length; i++) {
     let arr2 = [];
     for (let j = 0; j < arr.length; j++) {
@@ -244,7 +258,6 @@ function countElement(arr) {
   }
   return obj;
 }
-console.log(countElement([1, true, 1, 1, true]));
 
 /**
  * Object chứa thông tin về sinh viên
@@ -360,4 +373,3 @@ function sortStudents(students) {
   return arr;
 }
 
-console.log(sortStudents(students));
