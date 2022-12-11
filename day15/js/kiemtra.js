@@ -246,9 +246,9 @@ function countElement(arr) {
   let arr1 = [];
   arr1 = arr.filter(function (item) {
     if (arr1.includes(item)) return false;
-    else return true;
+    else return arr1.push(item);
   });
-console.log(arr1);
+  console.log(arr1);
   for (let i = 0; i < arr1.length; i++) {
     let arr2 = [];
     for (let j = 0; j < arr.length; j++) {
@@ -372,4 +372,3 @@ function sortStudents(students) {
   }
   return arr;
 }
-
