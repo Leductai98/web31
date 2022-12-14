@@ -40,4 +40,3 @@ let newRow = document
   .insertCell(0)
   .appendChild(document.createTextNode("Thầy giáo Ba siêu cấp đẹp trai"));
 
-console.log(document.querySelector("li"));
