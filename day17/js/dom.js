@@ -1,5 +1,6 @@
 const heading = "Thầy giáo Ba đẹp trai 🤓";
-const avatar = "https://i.ytimg.com/vi/JldMvQMO_5U/maxresdefault.jpg";
+const avatar =
+  "https://static.wikia.nocookie.net/eldenring/images/7/7a/ER_Godfrey.png";
 const profile = "https://twitter.com/banx9x";
 document.querySelector("title").innerText =
   document.querySelector(".heading").innerText;
