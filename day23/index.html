@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form {
+        display: flex;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+      select {
+        font-size: 16px;
+        background-color: rgb(245, 237, 237);
+      }
+      button {
+        font-size: 16px;
+      }
+      li {
+        font-size: 20px;
+      }
+     a{
+        text-decoration: underline;
+        cursor: pointer;
+        color: blue;
+     }
+    </style>
+  </head>
+  <body>
+    <h1>Breeds List</h1>
+    <div class="form">
+      <select id="breed-list"></select>
+
+      <button id="btn">Get Sub Breed</button>
+    </div>
+    <div class="sub-breed-list">
+      <h1>Sub Breeds List</h1>
+      <ul></ul>
+    </div>
+    <div class="result">
+      <img id="image" src="" alt="" />
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
