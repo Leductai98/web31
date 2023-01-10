@@ -3,6 +3,7 @@ const image = document.getElementById("image");
 const select = document.getElementById("breed-list");
 let ul = document.querySelector("ul");
 let option = document.getElementsByTagName("option");
+let a = document.getElementsByTagName("a");
 
 async function getBreedList() {
   let res = await axios.get("https://dog.ceo/api/breeds/list/all");
@@ -16,17 +17,21 @@ async function getBreedList() {
       if (select.value == arr[i]) {
         if (arr2[i].length == 0) {
           ul.innerHTML = `<li>Không có sub breed</li>`;
+          image.src = "";
         } else {
           let arr3 = arr2[i]
             .map(function (item) {
-              return `<li onclick="renderImg()"><a>${item}</a></li>`;
+              return `<li><a onclick="renderImg()">${item}</a></li>`;
             })
             .join("");
           ul.innerHTML = arr3;
         }
       }
     }
-    let li = document.getElementsByName("li");
+    let x = Array.from(a).map(function (item) {
+      return item.innerText;
+    });
+    console.log(x);
   });
 }
 
@@ -43,13 +48,15 @@ function renderBreed(breeds) {
 }
 getBreedList();
 
-async function renderImg() {
-  let res = await axios.get("https://dog.ceo/api/breeds/list/all");
-  let arr = Object.keys(res.data.message);
-  let arr2 = Object.values(res.data.message);
+async function renderImg(text) {
+  let result2 = select.value;
   let res2 = await axios.get(
-    "https://dog.ceo/api/breed/hound/afghan/images/random"
+    `https://dog.ceo/api/breed/hound/afghan/images/random`
   );
   image.src = res2.data.message;
-  console.log(image.src);
 }
+
+Array.from(a).forEach(async function (item) {
+  let text = item.innerText;
+  item.addEventListener("click", renderImg(text));
+});
